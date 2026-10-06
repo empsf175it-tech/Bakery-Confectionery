@@ -1,0 +1,1683 @@
+/* ==========================================================================
+   BAKESTUDIO - TABLET VIEW STYLESHEET (640px - 1023px)
+   ANY CHANGES MADE IN THIS FILE WILL ONLY AFFECT THE TABLET VIEW (640px-1023px)
+   ========================================================================== */
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+  /* Header Height & Base Alignment - Tablet View */
+  :root {
+    --header-height: 76px;
+  }
+
+  .site-header {
+    height: var(--header-height);
+  }
+
+  .site-header.scrolled {
+    height: var(--header-height);
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 24px;
+  }
+
+  /* Brand Logo Alignment in Tablet */
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 12px;
+  }
+
+  .brand-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+  }
+
+  .brand-title {
+    font-size: 1.45rem;
+    line-height: 1;
+  }
+
+  .brand-tagline {
+    font-size: 0.54rem;
+    letter-spacing: 1.8px;
+    margin-top: 3px;
+    line-height: 1;
+  }
+
+  /* Action Controls Alignment in Tablet View */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .nav-actions .action-btn {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: inline-flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    gap: 4px;
+    border: 1.5px solid var(--border-caramel);
+    background: var(--bg-surface);
+    color: var(--cocoa-deep);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .mobile-toggle span {
+    width: 20px;
+    height: 2px;
+    background: var(--cocoa-deep);
+    border-radius: 2px;
+    transition: all var(--transition-normal);
+  }
+
+  /* Navigation Drawer in Tablet View */
+  nav.nav-navigation {
+    position: static;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    background: rgba(255, 253, 249, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 24px 32px;
+    gap: 10px;
+    box-shadow: 0 20px 40px rgba(43, 26, 20, 0.15);
+    border-bottom: 1.5px solid var(--border-caramel);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: opacity 0.28s ease, transform 0.28s ease, visibility 0.28s;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-menu li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    transition: all var(--transition-fast);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--honey-light);
+    color: var(--caramel-gold);
+  }
+
+  /* Drawer Actions Section inside Hamburger Menu */
+  .drawer-actions-item {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 14px;
+    border-top: 1.5px solid var(--border-caramel);
+  }
+
+  .drawer-actions-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .drawer-action-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--cocoa-deep);
+    background: var(--bg-surface);
+    border: 1.5px solid var(--border-caramel);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .drawer-action-btn:hover,
+  .drawer-action-btn:active {
+    background: var(--honey-light);
+    color: var(--caramel-gold);
+    border-color: var(--caramel-gold);
+    transform: translateY(-1px);
+  }
+
+  /* ==========================================================================
+     GLOBAL TABLET LAYOUT & CENTER ALIGNMENT RULES
+     All Headings, Badges, Descriptions, and Buttons Centered Properly in Tablet
+     ========================================================================== */
+  html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 28px !important;
+    box-sizing: border-box !important;
+    overflow: hidden;
+  }
+
+  section {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    text-align: center;
+  }
+
+  .section-padding {
+    padding: 70px 0 !important;
+  }
+
+  /* Universal Center-Alignment for Headings & Text in Tablet View */
+  body,
+  p,
+  h1, h2, h3, h4, h5, h6,
+  .hero-content,
+  .hero-title,
+  .hero-description,
+  .hero-badge,
+  .section-header,
+  .section-title,
+  .section-desc,
+  .section-pill,
+  .feature-card,
+  .feature-strip-item,
+  .strip-info,
+  .service-card,
+  .service-body,
+  .service-title,
+  .service-desc,
+  .tier-card,
+  .tier-header,
+  .tier-title,
+  .tier-desc,
+  .enterprise-banner,
+  .enterprise-content,
+  .enterprise-title,
+  .enterprise-desc,
+  .process-step,
+  .process-step-card,
+  .step-title,
+  .step-desc,
+  .about-content,
+  .about-title,
+  .about-desc,
+  .about-text,
+  .team-card,
+  .team-info,
+  .team-name,
+  .team-role,
+  .team-bio,
+  .testimonial-card,
+  .testimonial-text,
+  .testimonial-author,
+  .contact-info,
+  .contact-card,
+  .newsletter-card,
+  .footer-col,
+  .footer-desc,
+  .footer-heading,
+  .footer-links,
+  .footer-links li,
+  .footer-links a,
+  .footer-bottom,
+  .order-confirmation-box,
+  .pricing-breakdown-card,
+  .slot-summary-card,
+  .delivery-security-box,
+  .calc-summary-card,
+  .cs-wrapper,
+  .error-wrapper {
+    text-align: center;
+  }
+
+  /* Universal Button Alignment in Tablet View */
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .btn-raspberry,
+  .btn-dark {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Section Header Alignment on Tablet */
+  .section-header {
+    margin: 0 auto 36px auto !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    max-width: 720px !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .section-pill {
+    font-size: 0.8rem !important;
+    padding: 6px 16px !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4.5vw, 2.8rem) !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+  }
+
+  .section-desc {
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    max-width: 650px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 1: HERO SECTION TABLET ALIGNMENT
+     ========================================================================== */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 36px) !important;
+    padding-bottom: 60px !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    width: 100% !important;
+    justify-items: center !important;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 760px !important;
+    align-items: center !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-badge {
+    max-width: 100% !important;
+    font-size: 0.88rem !important;
+    padding: 8px 18px !important;
+    gap: 8px !important;
+    line-height: 1.35 !important;
+    word-break: break-word !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 18px auto !important;
+    text-align: center !important;
+    justify-content: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .hero-title {
+    font-size: clamp(2.3rem, 5.2vw, 3.2rem) !important;
+    line-height: 1.15 !important;
+    margin: 0 auto 18px auto !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .hero-description {
+    font-size: 1.08rem !important;
+    line-height: 1.65 !important;
+    margin: 0 auto 28px auto !important;
+    max-width: 660px !important;
+    text-align: center !important;
+  }
+
+  .hero-cta-group {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 16px !important;
+    margin: 0 auto 34px auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .hero-cta-group .btn {
+    min-width: 200px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 13px 24px !important;
+    font-size: 0.98rem !important;
+    margin: 0 !important;
+  }
+
+  .hero-stats-strip {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    padding-top: 24px !important;
+    width: 100% !important;
+    max-width: 760px !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    border-top: 1px solid var(--border-caramel) !important;
+  }
+
+  .stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-width: 0 !important;
+  }
+
+  .stat-num {
+    font-size: 1.7rem !important;
+    line-height: 1.1 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .stat-label {
+    font-size: 0.78rem !important;
+    margin-top: 4px !important;
+    line-height: 1.25 !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .floating-pastry {
+    display: none !important;
+  }
+
+  .hero-visual-wrap {
+    width: 100% !important;
+    max-width: 620px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 10px auto 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .hero-main-card {
+    width: 100% !important;
+    max-width: 620px !important;
+    border-radius: var(--radius-lg) !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-main-card img {
+    height: 380px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+
+  /* ==========================================================================
+     FEATURES STRIP (2 COLUMNS - CENTER ALIGNED)
+     ========================================================================== */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .feature-strip-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 22px 18px !important;
+  }
+
+  .strip-icon {
+    margin: 0 auto 12px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .strip-info {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .strip-info h4,
+  .strip-info p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 2: BOOK NOW (INTERACTIVE CUSTOMIZER & HUB)
+     ========================================================================== */
+  .booking-progress-container {
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto 34px auto !important;
+    padding: 8px 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .booking-steps-track {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  .step-node {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .step-label {
+    text-align: center !important;
+    font-size: 0.78rem !important;
+  }
+
+  .customizer-workspace {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    width: 100% !important;
+    max-width: 740px !important;
+    margin: 0 auto !important;
+  }
+
+  .cake-preview-card {
+    position: relative !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .cake-3d-stage {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  .preview-specs {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin: 16px auto 0 auto !important;
+  }
+
+  .customizer-panel {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .customizer-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 24px !important;
+  }
+
+  .tier-tabs {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .flavor-grid,
+  .decor-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .flavor-card,
+  .decor-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 16px 12px !important;
+  }
+
+  .step-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    margin: 28px auto 0 auto !important;
+    width: 100% !important;
+  }
+
+  .step-actions .btn {
+    min-width: 170px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* ==========================================================================
+     PRICING CALCULATOR TABLET ALIGNMENT
+     ========================================================================== */
+  .pricing-calculator-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    max-width: 740px !important;
+    margin: 0 auto !important;
+  }
+
+  .calc-form-card {
+    text-align: center !important;
+  }
+
+  .calc-form-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .form-group {
+    text-align: center !important;
+  }
+
+  .form-group label {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto 8px auto !important;
+  }
+
+  .guest-counter-wrap {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 auto !important;
+  }
+
+  .calc-summary-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
+  }
+
+  .calc-total-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .calc-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 24px auto 0 auto !important;
+    width: 100% !important;
+  }
+
+  .calc-actions .btn {
+    justify-content: center !important;
+    text-align: center !important;
+    min-width: 200px !important;
+  }
+
+  /* ==========================================================================
+     DELIVERY PICKER TABLET ALIGNMENT
+     ========================================================================== */
+  .delivery-picker-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    width: 100% !important;
+    max-width: 740px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .delivery-options-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .delivery-type-tabs {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .slot-chips-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+
+  .slot-chip {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .details-form-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px !important;
+    text-align: center !important;
+  }
+
+  .slot-summary-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 540px !important;
+    margin: 0 auto !important;
+  }
+
+  .delivery-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 24px auto 0 auto !important;
+    width: 100% !important;
+  }
+
+  .delivery-actions .btn {
+    justify-content: center !important;
+    text-align: center !important;
+    min-width: 200px !important;
+  }
+
+  /* ==========================================================================
+     SECTION 3: SERVICES (2 COLUMNS - CENTER ALIGNED WITH EQUAL CARD SIZES)
+     ========================================================================== */
+  .services-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  .service-card {
+    flex: 0 0 calc(50% - 12px) !important;
+    width: calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 30px 22px !important;
+  }
+
+  .service-icon {
+    margin: 0 auto 16px auto !important;
+  }
+
+  .service-body {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .service-title {
+    text-align: center !important;
+    margin: 0 auto 8px auto !important;
+    width: 100% !important;
+  }
+
+  .service-desc {
+    text-align: center !important;
+    margin: 0 auto 16px auto !important;
+    width: 100% !important;
+  }
+
+  .service-features {
+    margin: 0 auto 16px auto !important;
+    text-align: center !important;
+    display: inline-block !important;
+  }
+
+  .service-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .service-footer .btn,
+  .service-card .btn {
+    margin: 0 auto !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* ==========================================================================
+     SECTION 4: ENTERPRISE HUB & TIERS (CENTER ALIGNED & EQUAL HEIGHT BUTTONS)
+     ========================================================================== */
+  .tier-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    align-items: stretch !important;
+    margin-bottom: 50px !important;
+  }
+
+  .tier-card {
+    position: relative !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    padding: 34px 14px 24px 14px !important;
+    box-sizing: border-box !important;
+  }
+
+  .tier-card .tilt-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-align: center !important;
+    height: 100% !important;
+    flex: 1 !important;
+    width: 100% !important;
+  }
+
+  .tier-header {
+    min-height: 64px !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  .tier-badge {
+    position: absolute !important;
+    top: -13px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5px 14px !important;
+    font-size: 0.72rem !important;
+    white-space: nowrap !important;
+    z-index: 10 !important;
+  }
+
+  .tier-name {
+    font-size: 1.25rem !important;
+    margin-bottom: 4px !important;
+    text-align: center !important;
+  }
+
+  .tier-subhead {
+    font-size: 0.78rem !important;
+    line-height: 1.3 !important;
+    color: var(--text-muted) !important;
+    text-align: center !important;
+  }
+
+  .tier-price {
+    font-size: 1.75rem !important;
+    margin: 12px 0 16px 0 !important;
+    height: 42px !important;
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    text-align: center !important;
+  }
+
+  .tier-price span {
+    font-size: 0.78rem !important;
+  }
+
+  .tier-features {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    margin: 0 auto 20px auto !important;
+    width: 100% !important;
+    padding: 0 4px !important;
+    flex: 1 !important;
+    list-style: none !important;
+  }
+
+  .tier-features li {
+    font-size: 0.78rem !important;
+    line-height: 1.35 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  .tier-features svg {
+    width: 15px !important;
+    height: 15px !important;
+    min-width: 15px !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .tier-action,
+  .tier-card .btn,
+  .tier-action .btn {
+    margin-top: auto !important;
+    width: 100% !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 10px 8px !important;
+    font-size: 0.84rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    line-height: 1 !important;
+  }
+
+  .enterprise-banner {
+    grid-template-columns: 1fr !important;
+    padding: 38px 28px !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+
+  .enterprise-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    max-width: 640px !important;
+  }
+
+  .enterprise-title {
+    text-align: center !important;
+    margin: 0 auto 12px auto !important;
+  }
+
+  .enterprise-desc {
+    text-align: center !important;
+    margin: 0 auto 20px auto !important;
+  }
+
+  .enterprise-actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .enterprise-actions .btn {
+    min-width: 190px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* ==========================================================================
+     SECTION 5: GALLERY (3 COLUMNS - CENTER ALIGNED)
+     ========================================================================== */
+  .gallery-filters {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto 32px auto !important;
+    width: 100% !important;
+  }
+
+  .filter-btn {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+  }
+
+  .gallery-card {
+    text-align: center !important;
+  }
+
+  .gallery-overlay {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .gallery-title,
+  .gallery-category {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 6: PROCESS TIMELINE (3 COLUMNS - CENTER ALIGNED WITH EQUAL CARD SIZES)
+     ========================================================================== */
+  .process-timeline {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  .process-step-card,
+  .process-step {
+    flex: 0 0 calc(33.333% - 14px) !important;
+    width: calc(33.333% - 14px) !important;
+    max-width: calc(33.333% - 14px) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 24px 18px !important;
+  }
+
+  .process-step-number,
+  .step-num {
+    margin: 0 auto 10px auto !important;
+    text-align: center !important;
+  }
+
+  .process-img {
+    margin: 0 auto 14px auto !important;
+    max-width: 100% !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .step-icon-wrap {
+    margin: 0 auto 14px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .step-title,
+  .process-step-card h4 {
+    text-align: center !important;
+    margin: 0 auto 8px auto !important;
+  }
+
+  .step-desc,
+  .process-step-card p {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 7: ABOUT US & TEAM (CENTER ALIGNED)
+     ========================================================================== */
+  .about-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    max-width: 740px !important;
+    margin: 0 auto !important;
+  }
+
+  .about-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .about-title {
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+  }
+
+  .about-desc {
+    text-align: center !important;
+    margin: 0 auto 16px auto !important;
+    max-width: 640px !important;
+  }
+
+  .about-text {
+    text-align: center !important;
+    margin: 0 auto 20px auto !important;
+    max-width: 640px !important;
+  }
+
+  .about-highlights {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto 24px auto !important;
+  }
+
+  .highlight-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .about-cta {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 auto !important;
+    flex-wrap: wrap !important;
+  }
+
+  .about-cta .btn {
+    min-width: 180px !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .about-stats-strip {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    margin: 28px auto 36px auto !important;
+    width: 100% !important;
+    max-width: 620px !important;
+    text-align: center !important;
+  }
+
+  .about-stat-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    flex: 1 !important;
+  }
+
+  .about-stat-box:not(:first-child) {
+    border-left: 1px solid var(--border-caramel) !important;
+    padding-left: 20px !important;
+  }
+
+  .about-stat-num,
+  .about-stat-label {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .about-visual {
+    width: 100% !important;
+    max-width: 580px !important;
+    margin: 0 auto !important;
+  }
+
+  .team-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  .team-card {
+    flex: 0 0 calc(50% - 12px) !important;
+    width: calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .team-info {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .team-name,
+  .team-role,
+  .team-bio {
+    text-align: center !important;
+    margin: 0 auto 6px auto !important;
+  }
+
+  .team-socials {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin: 12px auto 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 8: REVIEWS / TESTIMONIALS SLIDER (CENTER ALIGNED)
+     ========================================================================== */
+  .testimonials-slider-wrap {
+    width: 100% !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  .testimonials-track {
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  .testimonial-slide {
+    min-width: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .testimonial-card {
+    width: 100% !important;
+    max-width: 640px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 36px 28px !important;
+  }
+
+  .testimonial-stars {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 4px !important;
+    margin: 0 auto 14px auto !important;
+  }
+
+  .testimonial-quote {
+    text-align: center !important;
+    margin: 0 auto 18px auto !important;
+    font-style: italic !important;
+    max-width: 580px !important;
+  }
+
+  .testimonial-author {
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin: 0 auto 2px auto !important;
+  }
+
+  .testimonial-role {
+    font-size: 0.84rem !important;
+    color: var(--text-muted) !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 9: FAQ & NEWSLETTER (CENTER ALIGNED)
+     ========================================================================== */
+  .faq-wrap {
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
+  .newsletter-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 740px !important;
+    margin: 0 auto !important;
+    padding: 48px 32px !important;
+  }
+
+  .newsletter-card h3,
+  .newsletter-card p {
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+  }
+
+  .newsletter-form {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    max-width: 480px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     SECTION 10: CONTACT SECTION (CENTER ALIGNED)
+     ========================================================================== */
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+  }
+
+  .contact-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .contact-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 32px 24px !important;
+  }
+
+  .contact-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin: 0 auto 18px auto !important;
+  }
+
+  .contact-item .item-icon {
+    margin: 0 auto 10px auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .contact-form-card {
+    width: 100% !important;
+    max-width: 680px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 32px 28px !important;
+  }
+
+  .contact-form-card h3,
+  .contact-form-card p {
+    text-align: center !important;
+    margin: 0 auto 12px auto !important;
+  }
+
+  .contact-form .btn,
+  .contact-form-card .btn {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 16px auto 0 auto !important;
+    min-width: 220px !important;
+  }
+
+  /* ==========================================================================
+     FOOTER (2 COLUMNS - CENTER ALIGNED)
+     ========================================================================== */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px !important;
+    text-align: center !important;
+  }
+
+  .footer-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-col .brand-logo {
+    margin: 0 auto 14px auto !important;
+    justify-content: center !important;
+  }
+
+  .footer-desc {
+    text-align: center !important;
+    margin: 0 auto 18px auto !important;
+    max-width: 320px !important;
+  }
+
+  .footer-socials {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-heading {
+    text-align: center !important;
+    margin: 0 auto 14px auto !important;
+  }
+
+  .footer-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .footer-links li {
+    text-align: center !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+
+  .footer-links a {
+    text-align: center !important;
+    display: inline-block !important;
+  }
+
+  .footer-newsletter-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-newsletter-form input,
+  .footer-newsletter-form .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+    padding: 24px 0 !important;
+  }
+
+  .footer-bottom-links {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+    flex-wrap: wrap !important;
+    margin: 0 auto !important;
+  }
+
+  /* ==========================================================================
+     DASHBOARD & MODALS (TABLET ALIGNMENT)
+     ========================================================================== */
+  .dash-header {
+    padding: 0 18px !important;
+  }
+
+  .dash-sidebar {
+    width: 230px !important;
+    padding: 20px 14px !important;
+  }
+
+  .dash-main-scroll {
+    padding: 24px 20px !important;
+  }
+
+  .dash-menu-toggle-btn {
+    display: none !important;
+  }
+
+  .dash-sidebar-top-bar {
+    display: none !important;
+  }
+
+  .dash-sidebar-backdrop {
+    display: none !important;
+  }
+
+  .dash-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .dash-stat-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .kanban-board-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    align-items: start !important;
+    width: 100% !important;
+  }
+
+  .kanban-column {
+    min-height: 200px !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+  }
+
+  .kanban-col-header {
+    margin-bottom: 10px !important;
+    gap: 6px !important;
+  }
+
+  .kanban-card {
+    padding: 12px 10px !important;
+  }
+
+  .dash-table-wrap {
+    overflow-x: auto !important;
+  }
+
+  .modal-dialog,
+  .auth-modal-card {
+    max-width: 580px !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+  }
+
+  .role-selector-tabs {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 0 auto 16px auto !important;
+  }
+
+  .demo-creds-strip {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .modal-header,
+  .modal-title {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .modal-footer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  /* ==========================================================================
+     COMING SOON & 404 PAGES (TABLET ALIGNMENT)
+     ========================================================================== */
+  .countdown-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 14px !important;
+    max-width: 560px !important;
+    margin: 28px auto !important;
+  }
+
+  .error-nav-pills {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+    margin-top: 28px !important;
+  }
+}

@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BakeStudio | Haute Confectionery</title>
+  <meta name="description" content="Haute bakery and confectionery studio featuring interactive cake customizers, instant pricing calculators, delivery slot pickers, and enterprise HORECA supply.">
+  <meta name="keywords" content="bakery, artisan cakes, custom cake designer, wedding cakes, confectionery, enterprise bakery supply, macarons, pastry studio">
+  <meta name="author" content="BakeStudio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bakestudio.com/">
+  <meta property="og:title" content="BakeStudio">
+  <meta property="og:description" content="Design bespoke cakes with our live interactive customizer, instant pricing calculator, and temperature-controlled delivery.">
+  <meta property="og:image" content="assets/images/hero/hero_showcase.webp">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BakeStudio">
+  <meta name="twitter:description" content="Artisan bakery web studio with custom cake builder, real-time pricing, and baker management dashboard.">
+  <meta name="twitter:image" content="assets/images/hero/hero_showcase.webp">
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon & Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/logo-mark.svg">
+  <link rel="apple-touch-icon" href="../assets/images/logo/logo-mark.svg">
+
+  <!-- Dedicated View Stylesheets (Separate files for Base, Desktop >=1024px, Tablet 640-1023px, and Mobile <640px) -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/desktop.css">
+  <link rel="stylesheet" href="../assets/css/tablet.css">
+  <link rel="stylesheet" href="../assets/css/mobile.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- JSON-LD Structured Data: Bakery / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "BakeStudio",
+    "image": "assets/images/hero/hero_showcase.webp",
+    "description": "Artisanal haute patisserie specializing in custom tiered cakes, confectionery gifts, and corporate bulk bakery supply.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "742 Pâtisserie Boulevard, Atelier Suite 10",
+      "addressLocality": "Metro City",
+      "postalCode": "10001",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "url": "https://bakestudio.com",
+    "telephone": "+1-800-555-CAKE",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:30",
+        "closes": "21:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Accessible Skip to Content Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader Animation -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-icon">
+      <svg class="preloader-whisk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v20M8 5a6 6 0 0 0 0 12M16 5a6 6 0 0 1 0 12M4 9a8 8 0 0 0 0 4M20 9a8 8 0 0 1 0 4"/>
+      </svg>
+    </div>
+    <div class="preloader-text">BAKESTUDIO</div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="BakeStudio Haute Pâtisserie">
+        <div class="brand-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="navMarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="100%" stop-color="#FFF2DC" />
+              </linearGradient>
+              <linearGradient id="navMarkAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE0A3" />
+                <stop offset="100%" stop-color="#FFFFFF" />
+              </linearGradient>
+            </defs>
+            <path d="M5.5 23.5H26.5" stroke="url(#navMarkGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M7 23.5C7 14.5 10.8 8.5 16 8.5C21.2 8.5 25 14.5 25 23.5" stroke="url(#navMarkGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <path d="M16 9V20.5" stroke="url(#navMarkGrad)" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M16 9C12.8 9 10.8 12.8 10.8 16.5C10.8 19.2 13 21 16 21.8" stroke="url(#navMarkGrad)" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M16 9C19.2 9 21.2 12.8 21.2 16.5C21.2 19.2 19 21 16 21.8" stroke="url(#navMarkGrad)" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M16 11.5C14.2 11.5 13.2 13.8 13.2 16.2C13.2 18 14.4 19.2 16 19.8" stroke="url(#navMarkGrad)" stroke-width="1.3" stroke-linecap="round" />
+            <path d="M16 11.5C17.8 11.5 18.8 13.8 18.8 16.2C18.8 18 17.6 19.2 16 19.8" stroke="url(#navMarkGrad)" stroke-width="1.3" stroke-linecap="round" />
+            <path d="M13.5 22.8H18.5" stroke="url(#navMarkGrad)" stroke-width="1.8" stroke-linecap="round" />
+            <path d="M16 22.8V25.2" stroke="url(#navMarkGrad)" stroke-width="1.6" stroke-linecap="round" />
+            <circle cx="16" cy="26" r="1.1" fill="url(#navMarkGrad)" />
+            <path d="M16 2.2L16.8 4.4L19 5.2L16.8 6L16 8.2L15.2 6L13 5.2L15.2 4.4Z" fill="url(#navMarkAccent)" />
+            <circle cx="8.5" cy="11.5" r="0.9" fill="url(#navMarkAccent)" opacity="0.85" />
+            <circle cx="23.5" cy="11.5" r="0.9" fill="url(#navMarkAccent)" opacity="0.85" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title">Bake<span>Studio</span></div>
+          <span class="brand-tagline">Haute Pâtisserie</span>
+        </div>
+      </a>
+
+      <!-- Mandatory Menu: Home | Book Now | Services | Gallery | About | Contact -->
+      <nav class="nav-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#book-now" class="nav-link">Book Now</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#enterprise" class="nav-link">Enterprise Hub</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="drawer-actions-item">
+            <div class="drawer-actions-group">
+              <button id="mobileNavDashboardBtn" class="drawer-action-btn" title="Baker Dashboard" aria-label="Baker Dashboard">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="9" rx="1"/>
+                  <rect x="14" y="3" width="7" height="5" rx="1"/>
+                  <rect x="14" y="12" width="7" height="9" rx="1"/>
+                  <rect x="3" y="16" width="7" height="5" rx="1"/>
+                </svg>
+                <span>Dashboard</span>
+              </button>
+              <button id="mobileNavLoginBtn" class="drawer-action-btn" title="Login / Switch Account" aria-label="Login / Switch Account">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+                  <polyline points="10 17 15 12 10 7"/>
+                  <line x1="15" y1="12" x2="3" y2="12"/>
+                </svg>
+                <span>Login / Account</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Dashboard & Login Buttons & Mobile Menu -->
+      <div class="nav-actions">
+        <button id="navDashboardBtn" class="action-btn" title="Baker Dashboard" aria-label="Baker Dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="9" rx="1"/>
+            <rect x="14" y="3" width="7" height="5" rx="1"/>
+            <rect x="14" y="12" width="7" height="9" rx="1"/>
+            <rect x="3" y="16" width="7" height="5" rx="1"/>
+          </svg>
+        </button>
+
+        <button id="navLoginBtn" class="action-btn" title="Login / Switch Account" aria-label="Login / Switch Account">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ======================================================================
+         SECTION 1: HOME (Hero + Floating Pastries + Stats + Feature Strip)
+         ====================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="sparkle">✦</span> Pure Belgian Cocoa & French Normandy Butter
+            </div>
+            <h1 class="hero-title">
+              Artisan Confectionery & <span class="highlight">Bespoke Cake</span> Web Studio
+            </h1>
+            <p class="hero-description">
+              Experience the future of haute pâtisserie. Design multi-tier designer cakes with live 3D visual previews, calculate real-time pricing, reserve chilled express delivery slots, or place corporate enterprise bulk supply orders.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#book-now" class="btn btn-primary" id="heroDesignCakeBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Design Your Cake
+              </a>
+              <a href="#services" class="btn btn-outline" id="heroExploreServicesBtn">
+                Explore Studio Menu
+              </a>
+            </div>
+
+            <!-- Trust Stats Counters -->
+            <div class="hero-stats-strip">
+              <div class="stat-item">
+                <div class="stat-num">18,500<span>+</span></div>
+                <div class="stat-label">Celebrations Sweetened</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">480<span>+</span></div>
+                <div class="stat-label">HORECA & Corporate Partners</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">99.8<span>%</span></div>
+                <div class="stat-label">On-Time Zero-Tilt Delivery</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">4.96<span>★</span></div>
+                <div class="stat-label">from 3,400+ Reviews</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column Visual with Floating Pastries -->
+          <div class="hero-visual-wrap">
+            <div class="hero-card-glow"></div>
+            <div class="hero-main-card">
+              <img src="../assets/images/hero/hero_showcase.webp" alt="Artisan bakery showcase banquet with tiered designer wedding cake and gourmet desserts" width="1920" height="1080">
+            </div>
+
+            <!-- Animated Floating Pastry Visuals -->
+            <div class="floating-pastry float-1" title="Golden Butter Croissant">
+              <img src="../assets/images/hero/float_croissant.webp" alt="Fresh artisan butter croissant" width="400" height="400">
+            </div>
+            <div class="floating-pastry float-2" title="French Pistachio Macaron">
+              <img src="../assets/images/hero/float_macaron.webp" alt="French pistachio macaron" width="400" height="400">
+            </div>
+            <div class="floating-pastry float-3" title="Wild Berry Tart">
+              <img src="../assets/images/hero/float_tart.webp" alt="Fresh raspberry and blueberry tart" width="400" height="400">
+            </div>
+            <div class="floating-pastry float-4" title="Dark Chocolate Truffle">
+              <img src="../assets/images/hero/float_bonbon.webp" alt="Handcrafted Belgian chocolate bonbon" width="400" height="400">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Strip -->
+    <div class="features-strip">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-strip-item">
+            <div class="strip-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M8 5a6 6 0 0 0 0 12M16 5a6 6 0 0 1 0 12"/></svg>
+            </div>
+            <div class="strip-info">
+              <h4>Slow-Proofed & Handcrafted</h4>
+              <p>84% French butter, zero preservatives</p>
+            </div>
+          </div>
+          <div class="feature-strip-item">
+            <div class="strip-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div class="strip-info">
+              <h4>Chilled Climate Vans</h4>
+              <p>Strict 4°C gyroscopic zero-tilt transit</p>
+            </div>
+          </div>
+          <div class="feature-strip-item">
+            <div class="strip-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="strip-info">
+              <h4>Custom Dietary Perfection</h4>
+              <p>Eggless, Vegan & Keto-friendly lines</p>
+            </div>
+          </div>
+          <div class="feature-strip-item">
+            <div class="strip-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="strip-info">
+              <h4>Enterprise B2B Invoicing</h4>
+              <p>GST invoices, PO orders & Net-30 terms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flavor Marquee Ticker - Running Banner -->
+    <div class="flavor-marquee" aria-label="Signature Confectionery Flavors Ticker">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>Belgian Dark Truffle 70% ✦</span>
+          <span>Sicilian Pistachio & Cardamom ✦</span>
+          <span>Madagascar Bourbon Vanilla ✦</span>
+          <span>French Raspberry Velvet ✦</span>
+          <span>Salted Caramel Dulce de Leche ✦</span>
+          <span>Espresso Tiramisu Praline ✦</span>
+          <span>Mango & Passionfruit Coulis ✦</span>
+        </div>
+        <div class="marquee-content" aria-hidden="true">
+          <span>Belgian Dark Truffle 70% ✦</span>
+          <span>Sicilian Pistachio & Cardamom ✦</span>
+          <span>Madagascar Bourbon Vanilla ✦</span>
+          <span>French Raspberry Velvet ✦</span>
+          <span>Salted Caramel Dulce de Leche ✦</span>
+          <span>Espresso Tiramisu Praline ✦</span>
+          <span>Mango & Passionfruit Coulis ✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         SECTION 2: BOOK NOW (INTERACTIVE FEATURE HUB)
+         - Interactive Cake Customizer
+         - Instant Pricing Calculator
+         - Delivery Slot Picker
+         - Multi-Step Booking Form (1 to 5)
+         ====================================================================== -->
+    <section id="book-now" class="booking-hub-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Interactive Booking Studio
+          </div>
+          <h2 class="section-title">Design Your Cake & <span>Instant Reservation</span></h2>
+          <p class="section-desc">
+            Use our live visual customizer to tailor every tier, calculate real-time pricing, pick your preferred delivery slot, and secure your order seamlessly.
+          </p>
+        </div>
+
+        <!-- 5-Step Progress Bar -->
+        <div class="booking-progress-container">
+          <div class="booking-progress-bar">
+            <div class="booking-progress-fill" id="bookingProgressFill"></div>
+          </div>
+          <div class="booking-steps-track">
+            <div class="step-node active" data-step-index="1">
+              <div class="step-bubble">1</div>
+              <span class="step-label">Customize</span>
+            </div>
+            <div class="step-node" data-step-index="2">
+              <div class="step-bubble">2</div>
+              <span class="step-label">Pricing</span>
+            </div>
+            <div class="step-node" data-step-index="3">
+              <div class="step-bubble">3</div>
+              <span class="step-label">Delivery Slot</span>
+            </div>
+            <div class="step-node" data-step-index="4">
+              <div class="step-bubble">4</div>
+              <span class="step-label">Details</span>
+            </div>
+            <div class="step-node" data-step-index="5">
+              <div class="step-bubble">5</div>
+              <span class="step-label">Confirmation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 1: INTERACTIVE CAKE CUSTOMIZER -->
+        <div class="booking-step-content active" id="bookingStep1">
+          <div class="customizer-workspace">
+            
+            <!-- Left: Live Visual Preview Card -->
+            <div class="cake-preview-card">
+              <div class="preview-badge-row">
+                <span class="live-badge">● Live 3D Preview</span>
+                <span class="dietary-badge" id="liveDietaryTag">100% Pure Eggless</span>
+              </div>
+
+              <!-- Interactive Cake Stage with Rich Photorealistic Image -->
+              <div class="cake-stage" id="cakeStage">
+                <div class="cake-real-image-wrap" id="cakeRealImageWrap">
+                  <img src="../assets/images/customizer/cake_chocolate.svg" id="cakeRealImage" alt="Live Bespoke Artisan Cake Customizer Preview" class="cake-real-img">
+                  <!-- Custom Piped Message Overlay Ribbon -->
+                  <div class="cake-piped-message" id="cakePipedMessage">Happy Birthday!</div>
+                </div>
+              </div>
+
+              <!-- Live Specs Summary -->
+              <div class="live-specs-summary">
+                <div class="spec-line">
+                  <span class="label">Flavor:</span>
+                  <span class="val" id="specFlavor">Belgian Dark Chocolate Truffle</span>
+                </div>
+                <div class="spec-line">
+                  <span class="label">Size / Servings:</span>
+                  <span class="val" id="specSize">1.0 kg (8-10 slices)</span>
+                </div>
+                <div class="spec-line">
+                  <span class="label">Frosting & Tint:</span>
+                  <span class="val" id="specFrosting">Cocoa Mocha (Swiss Meringue Buttercream)</span>
+                </div>
+                <div class="spec-line" style="border-top: 1px dashed var(--border-caramel); padding-top: 8px; margin-top: 4px;">
+                  <span class="label" style="font-weight: 700; color: var(--cocoa-deep);">Instant Estimate:</span>
+                  <span class="val" id="liveCardPrice" style="color: var(--caramel-gold); font-size: 1.25rem;">$56.70</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Customizer Control Options -->
+            <div class="customizer-controls-panel">
+              
+              <!-- 1. Shape Selection -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>1. Choose Cake Silhouette & Shape</span>
+                </div>
+                <div class="option-group-subtitle">Pick the geometric contour of your confection</div>
+                <div class="select-pills-grid">
+                  <button type="button" class="custom-pill-btn shape-btn active" data-shape="round">
+                    <span class="pill-name">Classic Round</span>
+                    <span class="pill-meta">Timeless & Balanced</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn shape-btn" data-shape="square">
+                    <span class="pill-name">Architectural Square</span>
+                    <span class="pill-meta">Modern Sharp Edges</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn shape-btn" data-shape="heart">
+                    <span class="pill-name">Romantic Heart</span>
+                    <span class="pill-meta">Vintage Lambeth Style</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn shape-btn" data-shape="tiered">
+                    <span class="pill-name">Royal Multi-Tier</span>
+                    <span class="pill-meta">Grand Celebration</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 2. Size & Servings -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>2. Select Size & Guest Portions</span>
+                </div>
+                <div class="option-group-subtitle">Calculated generously by artisan pastry standards</div>
+                <div class="select-pills-grid">
+                  <button type="button" class="custom-pill-btn size-btn" data-size="0.5">
+                    <span class="pill-name">0.5 kg</span>
+                    <span class="pill-meta">4–6 guests</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn size-btn active" data-size="1.0">
+                    <span class="pill-name">1.0 kg</span>
+                    <span class="pill-meta">8–10 guests</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn size-btn" data-size="2.0">
+                    <span class="pill-name">2.0 kg</span>
+                    <span class="pill-meta">16–20 guests</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn size-btn" data-size="3.0">
+                    <span class="pill-name">3.0 kg</span>
+                    <span class="pill-meta">25–30 guests</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn size-btn" data-size="5.0">
+                    <span class="pill-name">5.0 kg Royal</span>
+                    <span class="pill-meta">45–50 guests</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 3. Base Flavors -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>3. Artisan Base Flavor</span>
+                </div>
+                <div class="option-group-subtitle">Prepared with single-origin beans and pure extracts</div>
+                <div class="select-pills-grid">
+                  <button type="button" class="custom-pill-btn flavor-btn active" data-flavor="chocolate">
+                    <span class="pill-name">Belgian Dark Truffle</span>
+                    <span class="pill-meta">Callebaut 70%</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn flavor-btn" data-flavor="redvelvet">
+                    <span class="pill-name">Classic Red Velvet</span>
+                    <span class="pill-meta">+ $4.00</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn flavor-btn" data-flavor="vanilla">
+                    <span class="pill-name">Madagascar Vanilla</span>
+                    <span class="pill-meta">+ $2.00</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn flavor-btn" data-flavor="butterscotch">
+                    <span class="pill-name">Butterscotch Praline</span>
+                    <span class="pill-meta">+ $5.00</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn flavor-btn" data-flavor="pistachio">
+                    <span class="pill-name">Sicilian Pistachio</span>
+                    <span class="pill-meta">+ $8.00</span>
+                  </button>
+                  <button type="button" class="custom-pill-btn flavor-btn" data-flavor="blueberry">
+                    <span class="pill-name">Blueberry Lemon Zest</span>
+                    <span class="pill-meta">+ $6.00</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 4. Frosting Color Palette -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>4. Frosting Color Tone & Swatch</span>
+                </div>
+                <div class="option-group-subtitle">Tinted with all-natural vegetable-based pigments</div>
+                <div class="color-swatches-grid">
+                  <button type="button" class="swatch-btn active" data-color-name="Cocoa Mocha" data-color-hex="#5C3828">
+                    <div class="swatch-circle" style="background: #5C3828;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#5C3828"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#3A2118" opacity="0.6"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#F0C059"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#F0C059"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#F0C059"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.22" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Mocha</span>
+                  </button>
+                  <button type="button" class="swatch-btn" data-color-name="Ivory Silk" data-color-hex="#FAF5EC">
+                    <div class="swatch-circle" style="background: #FAF5EC;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#FAF5EC"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#E6DCCA" opacity="0.7"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#C98B4B"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#C98B4B"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#C98B4B"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.4" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Ivory Silk</span>
+                  </button>
+                  <button type="button" class="swatch-btn" data-color-name="Blush Rose" data-color-hex="#F4CCD4">
+                    <div class="swatch-circle" style="background: #F4CCD4;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#F4CCD4"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#E2A8B4" opacity="0.6"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#E8B04B"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#E8B04B"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#E8B04B"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.35" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Blush Rose</span>
+                  </button>
+                  <button type="button" class="swatch-btn" data-color-name="Pistachio Mint" data-color-hex="#C8DEC3">
+                    <div class="swatch-circle" style="background: #C8DEC3;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#C8DEC3"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#7A9E69" opacity="0.5"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#E8B04B"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#E8B04B"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#E8B04B"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.35" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Pistachio</span>
+                  </button>
+                  <button type="button" class="swatch-btn" data-color-name="Royal Navy" data-color-hex="#253551">
+                    <div class="swatch-circle" style="background: #253551;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#253551"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#34486D" opacity="0.7"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#FFD700"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#FFD700"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#FFD700"/>
+                        <circle cx="28" cy="12" r="1" fill="#FFD700"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.25" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Navy Blue</span>
+                  </button>
+                  <button type="button" class="swatch-btn" data-color-name="Lavender Mist" data-color-hex="#E2D6EB">
+                    <div class="swatch-circle" style="background: #E2D6EB;">
+                      <svg viewBox="0 0 38 38" width="38" height="38" style="border-radius: 50%;">
+                        <circle cx="19" cy="19" r="19" fill="#E2D6EB"/>
+                        <path d="M4 12 Q 12 19 19 12 Q 26 19 34 12 L34 4 L4 4 Z" fill="#9C7EB8" opacity="0.5"/>
+                        <circle cx="12" cy="14" r="1.5" fill="#F0C059"/>
+                        <circle cx="24" cy="20" r="1.8" fill="#F0C059"/>
+                        <circle cx="18" cy="26" r="1.2" fill="#F0C059"/>
+                        <ellipse cx="14" cy="10" rx="9" ry="4" fill="#FFFFFF" opacity="0.35" transform="rotate(-30 14 10)"/>
+                      </svg>
+                    </div>
+                    <span class="swatch-name">Lavender</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 5. Artisanal Toppings -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>5. Handcrafted Artisanal Toppings</span>
+                </div>
+                <div class="option-group-subtitle">Select multiple garnishes for decadent visual flair</div>
+                <div class="checkbox-cards-grid">
+                  <label class="checkbox-card topping-card checked">
+                    <input type="checkbox" value="berries" checked>
+                    <div class="check-label">
+                      <span class="check-title">Fresh Berries & Figs</span>
+                      <span class="check-price">+ $6.00</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card topping-card">
+                    <input type="checkbox" value="macarons">
+                    <div class="check-label">
+                      <span class="check-title">French Macarons (4 pcs)</span>
+                      <span class="check-price">+ $8.00</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card topping-card checked">
+                    <input type="checkbox" value="goldleaf" checked>
+                    <div class="check-label">
+                      <span class="check-title">24K Edible Gold Leaf</span>
+                      <span class="check-price">+ $10.00</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card topping-card">
+                    <input type="checkbox" value="sprinkles">
+                    <div class="check-label">
+                      <span class="check-title">Crispy Caramel Pearls</span>
+                      <span class="check-price">+ $3.00</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card topping-card">
+                    <input type="checkbox" value="flowers">
+                    <div class="check-label">
+                      <span class="check-title">Sugar Blossom Petals</span>
+                      <span class="check-price">+ $7.00</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- 6. Custom Piped Message & Dietary Options -->
+              <div class="option-group">
+                <div class="option-group-title">
+                  <span>6. Custom Piped Inscription & Dietary Options</span>
+                </div>
+                <div class="option-group-subtitle">Hand-piped by master calligrapher chefs</div>
+                <div class="cake-message-input-box" style="margin-bottom: 20px;">
+                  <input type="text" id="cakeMessageInput" class="cake-msg-input" maxlength="30" value="Happy Birthday!" placeholder="E.g. Happy 30th Birthday Sophia!">
+                  <span class="char-counter" id="msgCharCounter">15/30</span>
+                </div>
+
+                <div class="checkbox-cards-grid">
+                  <label class="checkbox-card dietary-card checked">
+                    <input type="checkbox" value="eggless" checked>
+                    <div class="check-label">
+                      <span class="check-title">100% Pure Eggless</span>
+                      <span class="check-price">Included</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card dietary-card">
+                    <input type="checkbox" value="vegan">
+                    <div class="check-label">
+                      <span class="check-title">Vegan (Dairy-Free)</span>
+                      <span class="check-price">+ $6.00</span>
+                    </div>
+                  </label>
+                  <label class="checkbox-card dietary-card">
+                    <input type="checkbox" value="sugarfree">
+                    <div class="check-label">
+                      <span class="check-title">Sugar-Free / Stevia</span>
+                      <span class="check-price">+ $8.00</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2: INSTANT PRICING CALCULATOR -->
+        <div class="booking-step-content" id="bookingStep2">
+          <div class="pricing-calculator-layout">
+            
+            <!-- Left: Transparent Real-Time Price Itemization -->
+            <div class="pricing-breakdown-card">
+              <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Transparent Price Breakdown</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">No hidden charges. Ingredients sourced directly from fair-trade cooperatives.</p>
+
+              <div class="price-item-row">
+                <span class="label">Base Cake & Organic Flour</span>
+                <span class="val" id="priceBase">$38.00</span>
+              </div>
+              <div class="price-item-row">
+                <span class="label">Specialty Flavor & Custom Shape</span>
+                <span class="val" id="priceCustoms">$0.00</span>
+              </div>
+              <div class="price-item-row">
+                <span class="label">Artisanal Toppings & 24K Gold</span>
+                <span class="val" id="priceToppings">$16.00</span>
+              </div>
+              <div class="price-item-row">
+                <span class="label">Insulated Climate Delivery Fee</span>
+                <span class="val" id="priceDelivery">$5.00</span>
+              </div>
+              <div class="price-item-row">
+                <span class="label">State Sales & Pâtisserie Tax (5%)</span>
+                <span class="val" id="priceTax">$2.70</span>
+              </div>
+
+              <!-- Grand Total Animated Row -->
+              <div class="price-total-row">
+                <div class="total-label">Grand Total:</div>
+                <div class="total-amount" id="priceGrandTotal">$61.70</div>
+              </div>
+
+              <!-- Bulk / Corporate Discount Tiers Slider -->
+              <div class="bulk-tier-box">
+                <div class="bulk-tier-header">
+                  <span class="bulk-tier-title">Event & Corporate Multiplier</span>
+                  <span class="bulk-tier-discount-badge" id="bulkDiscountBadge">Single Order (0%)</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">
+                  Ordering for an event or gifting? Automatic discounts apply: <strong>5+ units = 10% off</strong>, <strong>11+ units = 15% off</strong>, <strong>25+ units = 25% off</strong>.
+                </p>
+                <div class="quantity-stepper">
+                  <button type="button" class="stepper-btn" id="qtyMinusBtn">−</button>
+                  <span class="stepper-val" id="bulkQtyVal">1</span>
+                  <button type="button" class="stepper-btn" id="qtyPlusBtn">+</button>
+                  <span style="font-size: 0.85rem; color: var(--text-muted); margin-left: 8px;">custom cake units</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Complimentary Studio Extras Included -->
+            <div class="pricing-breakdown-card" style="background: #FFFDF8;">
+              <h3 style="font-size: 1.35rem; margin-bottom: 14px;">Complimentary Studio Additions</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">Every order leaves our atelier with white-glove presentation:</p>
+
+              <div class="studio-addition-list" style="display: flex; flex-direction: column; gap: 14px;">
+                <div class="studio-addition-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="color: var(--caramel-gold); font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">✓</span>
+                  <div style="text-align: left;">
+                    <h5 style="font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 2px; text-align: left;">Luxury Embossed Hat Box</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); text-align: left;">With satin ribbon handle and thermal insulated base.</p>
+                  </div>
+                </div>
+                <div class="studio-addition-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="color: var(--caramel-gold); font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">✓</span>
+                  <div style="text-align: left;">
+                    <h5 style="font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 2px; text-align: left;">Gold Sparkler & Pastel Birthday Candles</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); text-align: left;">Premium smokeless sparkler and 6 pastel candles.</p>
+                  </div>
+                </div>
+                <div class="studio-addition-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="color: var(--caramel-gold); font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">✓</span>
+                  <div style="text-align: left;">
+                    <h5 style="font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 2px; text-align: left;">Handwritten Calligraphy Gift Card</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); text-align: left;">Crafted on handmade French deckled-edge paper.</p>
+                  </div>
+                </div>
+                <div class="studio-addition-item" style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="color: var(--caramel-gold); font-size: 1.2rem; flex-shrink: 0; line-height: 1.2;">✓</span>
+                  <div style="text-align: left;">
+                    <h5 style="font-family: var(--font-sans); font-size: 0.95rem; margin-bottom: 2px; text-align: left;">Food Grade Acrylic Cake Knife & Server</h5>
+                    <p style="font-size: 0.82rem; color: var(--text-muted); text-align: left;">Precision slicing tool with matching dessert napkins.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 3: DELIVERY SLOT PICKER & CALENDAR -->
+        <div class="booking-step-content" id="bookingStep3">
+          <div class="delivery-picker-layout">
+            
+            <!-- Left: Calendar Date Selection -->
+            <div class="delivery-options-box">
+              <div class="fulfillment-toggle-row">
+                <button type="button" class="fulfillment-toggle-btn active" id="toggleFulfillmentDelivery">
+                  Insulated Home Delivery
+                </button>
+                <button type="button" class="fulfillment-toggle-btn" id="toggleFulfillmentPickup">
+                  Central Atelier Pickup (Save 5%)
+                </button>
+              </div>
+
+              <!-- Interactive Calendar Widget -->
+              <div class="calendar-widget">
+                <div class="calendar-header">
+                  <span class="calendar-month-title" id="calendarMonthTitle">October 2026</span>
+                  <div style="display: flex; gap: 6px;">
+                    <button type="button" class="calendar-nav-btn" id="calendarPrevMonth" aria-label="Previous Month">&lt;</button>
+                    <button type="button" class="calendar-nav-btn" id="calendarNextMonth" aria-label="Next Month">&gt;</button>
+                  </div>
+                </div>
+                <div class="calendar-days-grid" id="calendarDaysGrid">
+                  <!-- Rendered dynamically by booking.js -->
+                </div>
+              </div>
+
+              <!-- Postal/Pincode Verification -->
+              <div class="pincode-verify-box" id="pincodeVerifyBox">
+                <label for="pincodeInput" style="font-size: 0.88rem; font-weight: 700; color: var(--cocoa-deep);">Delivery Pincode / Postal Verification</label>
+                <div class="pincode-input-row">
+                  <input type="text" id="pincodeInput" class="pincode-input" placeholder="E.g. 10001 or W1A" value="10001">
+                  <button type="button" class="btn btn-primary" id="pincodeCheckBtn" style="min-height: 40px; padding: 0 18px; font-size: 0.85rem;">Verify Zone</button>
+                </div>
+                <div class="pincode-result-msg success" id="pincodeResultMsg">
+                  ✓ Area code 10001 is in Zone A! Fresh express insulated delivery available.
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Delivery Time Slots Grid -->
+            <div class="delivery-options-box">
+              <h4 style="font-size: 1.25rem; margin-bottom: 6px;">Select Chilled Delivery Time Slot</h4>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">Our zero-tilt vans operate on scheduled temperature routes.</p>
+
+              <div class="time-slots-container">
+                <!-- Morning -->
+                <div class="slot-period-group">
+                  <h5>Morning Slots (09:00 AM – 12:00 PM)</h5>
+                  <div class="slot-buttons-grid">
+                    <button type="button" class="slot-btn" data-slot-period="Morning" data-slot-time="09:00 - 10:30">
+                      <span class="slot-time">09:00 - 10:30 AM</span>
+                      <span class="slot-tag available">Available</span>
+                    </button>
+                    <button type="button" class="slot-btn" data-slot-period="Morning" data-slot-time="10:30 - 12:00">
+                      <span class="slot-time">10:30 - 12:00 PM</span>
+                      <span class="slot-tag limited">2 Slots Left</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Afternoon -->
+                <div class="slot-period-group">
+                  <h5>Afternoon Slots (01:00 PM – 04:00 PM)</h5>
+                  <div class="slot-buttons-grid">
+                    <button type="button" class="slot-btn active" data-slot-period="Afternoon" data-slot-time="13:00 - 14:30">
+                      <span class="slot-time">01:00 - 02:30 PM</span>
+                      <span class="slot-tag available">Available</span>
+                    </button>
+                    <button type="button" class="slot-btn booked" data-slot-period="Afternoon" data-slot-time="14:30 - 16:00" disabled>
+                      <span class="slot-time">02:30 - 04:00 PM</span>
+                      <span class="slot-tag soldout">Fully Booked</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Evening -->
+                <div class="slot-period-group">
+                  <h5>Evening Slots (05:00 PM – 08:00 PM)</h5>
+                  <div class="slot-buttons-grid">
+                    <button type="button" class="slot-btn" data-slot-period="Evening" data-slot-time="17:00 - 18:30">
+                      <span class="slot-time">05:00 - 06:30 PM</span>
+                      <span class="slot-tag available">Available</span>
+                    </button>
+                    <button type="button" class="slot-btn" data-slot-period="Evening" data-slot-time="18:30 - 20:00">
+                      <span class="slot-time">06:30 - 08:00 PM</span>
+                      <span class="slot-tag limited">1 Slot Left</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Selected Slot Summary Box -->
+                <div style="background: #FFF9F0; border-radius: var(--radius-md); padding: 14px 18px; border: 1px solid var(--border-caramel); margin-top: 14px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                    <span style="color: var(--text-muted);">Selected Date:</span>
+                    <strong id="selectedDateDisplay" style="color: var(--cocoa-deep);">Tomorrow</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-top: 4px;">
+                    <span style="color: var(--text-muted);">Time Window:</span>
+                    <strong id="selectedSlotDisplay" style="color: var(--caramel-gold);">Afternoon (13:00 - 14:30)</strong>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 4: RECIPIENT & CONTACT DETAILS -->
+        <div class="booking-step-content" id="bookingStep4">
+          <div class="delivery-options-box" style="max-width: 860px; margin: 0 auto;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Recipient & Delivery Contact</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 28px;">
+              Please provide accurate recipient information to coordinate temperature delivery and live SMS tracking.
+            </p>
+
+            <form id="bookingDetailsForm" novalidate>
+              <div class="details-form-grid">
+                <div class="form-group">
+                  <label for="custName" class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" id="custName" class="form-input" placeholder="E.g. Victoria Sterling" required>
+                  <span class="form-error-msg" id="errCustName">Please enter a valid full name (min 2 chars).</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="custEmail" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="custEmail" class="form-input" placeholder="victoria@luxuryevents.com" required>
+                  <span class="form-error-msg" id="errCustEmail">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="custPhone" class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
+                  <input type="tel" id="custPhone" class="form-input" placeholder="+1 (555) 342-9871" required>
+                  <span class="form-error-msg" id="errCustPhone">Please enter a valid contact phone number.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="custOccasion" class="form-label">Celebration Occasion</label>
+                  <select id="custOccasion" class="form-select">
+                    <option value="birthday">Birthday Party</option>
+                    <option value="wedding">Wedding / Reception</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="corporate">Corporate / Brand Event</option>
+                    <option value="other">Other Celebration</option>
+                  </select>
+                </div>
+
+                <div class="form-group full-width" id="deliveryAddressGroup">
+                  <label for="custAddress" class="form-label">Delivery Street Address & Unit/Suite <span class="required">*</span></label>
+                  <textarea id="custAddress" class="form-textarea" rows="2" placeholder="Street address, building, suite/apartment number, gate code" required></textarea>
+                  <span class="form-error-msg" id="errCustAddress">Please provide a complete delivery street address.</span>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="custNotes" class="form-label">Special Delivery / Chef Notes (Optional)</label>
+                  <textarea id="custNotes" class="form-textarea" rows="2" placeholder="E.g. Please ring doorbell twice, allergy instructions, or surprise gift instructions"></textarea>
+                </div>
+
+                <!-- Payment Selection Placeholders -->
+                <div class="form-group full-width">
+                  <label class="form-label">Payment Method Preference</label>
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 6px;">
+                    <button type="button" class="custom-pill-btn payment-option-btn active" data-payment="card">
+                      <span class="pill-name">Credit Card / Stripe</span>
+                      <span class="pill-meta">Instant Zero Fee</span>
+                    </button>
+                    <button type="button" class="custom-pill-btn payment-option-btn" data-payment="paypal">
+                      <span class="pill-name">PayPal</span>
+                      <span class="pill-meta">Buyer Protection</span>
+                    </button>
+                    <button type="button" class="custom-pill-btn payment-option-btn" data-payment="cod">
+                      <span class="pill-name">Cash On Delivery</span>
+                      <span class="pill-meta">Pay at Doorstep</span>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- STEP 5: ORDER CONFIRMATION & SUMMARY -->
+        <div class="booking-step-content" id="bookingStep5">
+          <div class="order-confirmation-box">
+            <div class="confirm-success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 style="font-size: 2rem; margin-bottom: 6px;">Order Reserved Successfully!</h3>
+            <p style="color: var(--text-secondary); font-size: 1.05rem;">
+              Your bespoke confection has been scheduled in our master baking queue.
+            </p>
+
+            <div class="order-id-display">
+              ORDER ID: <span id="generatedOrderId">AMR-2026-8942</span>
+            </div>
+
+            <!-- Summary Card -->
+            <div class="confirmation-details-card">
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-caramel); padding-bottom: 12px; margin-bottom: 12px;">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Custom Creation:</span>
+                <strong id="confCakeDesc" style="color: var(--cocoa-deep); font-size: 0.95rem; text-align: right;">1.0 kg Belgian Dark Truffle</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-caramel); padding-bottom: 12px; margin-bottom: 12px;">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Schedule Window:</span>
+                <strong id="confSchedule" style="color: var(--cocoa-deep); font-size: 0.95rem; text-align: right;">Tomorrow | Afternoon</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-caramel); padding-bottom: 12px; margin-bottom: 12px;">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Recipient / Delivery:</span>
+                <strong id="confRecipient" style="color: var(--cocoa-deep); font-size: 0.95rem; text-align: right;">Victoria Sterling</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 6px;">
+                <span style="font-size: 1.1rem; font-weight: 700; color: var(--cocoa-deep);">Amount Charged:</span>
+                <strong id="confGrandTotal" style="font-size: 1.6rem; color: var(--caramel-gold); font-family: var(--font-serif);">$61.70</strong>
+              </div>
+            </div>
+
+            <div class="confirm-action-row">
+              <button type="button" class="btn btn-primary" onclick="window.print()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Print / Save Receipt
+              </button>
+              <button type="button" class="btn btn-dark" onclick="PatisserieDashboard.openDashboard()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Track in Live Dashboard
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wizard Navigation Buttons Footer -->
+        <div class="booking-nav-footer">
+          <button type="button" class="btn btn-outline" id="wizardPrevBtn" style="visibility: hidden;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            Back Step
+          </button>
+          <button type="button" class="btn btn-primary" id="wizardNextBtn">
+            Continue to Next Step
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFFDF9"></path>
+      </svg>
+    </div>
+
+    <!-- ======================================================================
+         SECTION 3: SERVICES (9 DEDICATED CARDS, CENTER ALIGNED, 3D TILT, BAKERY ANIMATIONS)
+         ====================================================================== -->
+    <section id="services" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M8 5a6 6 0 0 0 0 12M16 5a6 6 0 0 1 0 12"/></svg>
+            Our Culinary Spectrum
+          </div>
+          <h2 class="section-title">Artisan Services & <span>Confectionery Craft</span></h2>
+          <p class="section-desc">
+            From bespoke sculptural wedding tiers to Michelin-grade hotel wholesale, explore our handcrafted repertoire of bakery excellence.
+          </p>
+        </div>
+
+        <!-- 9 Services Grid (All Cards 3D Tilt + Center Aligned) -->
+        <div class="services-grid">
+          
+          <!-- Card 1: Custom Designer Cakes (Anim: Rising Dough) -->
+          <article class="service-card tilt-card anim-dough">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_custom_cakes.webp" alt="Bespoke artisan chocolate designer cake with chocolate curls, fresh berries, and 24K gold foil" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Custom Designer Cakes</h3>
+              <p class="service-desc">Sculptural centerpieces tailored to individual themes with hand-painted ganache, edible botanicals, and bespoke silhouettes.</p>
+              <a href="#book-now" class="service-action-link">Design in Customizer →</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Wedding & Event Cakes (Anim: Gold Shimmer) -->
+          <article class="service-card tilt-card anim-gold-shine">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_wedding_cakes.webp" alt="Grand tiered wedding cake with cascading sugar blossoms" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Wedding & Grand Event Cakes</h3>
+              <p class="service-desc">Multi-tiered architectural masterpieces with structural engineering, tasting sessions, and white-glove venue assembly.</p>
+              <a href="#book-now" class="service-action-link">Book Wedding Tasting →</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Corporate & Enterprise Orders (Anim: Steam Rising) -->
+          <article class="service-card tilt-card anim-steam">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_corporate_orders.webp" alt="Corporate branded dessert boxes and gift arrangements" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Corporate & Enterprise Orders</h3>
+              <p class="service-desc">Custom logo embossing, personalized client gifting, annual gala banquets, and seamless GST invoicing on net terms.</p>
+              <a href="#enterprise" class="service-action-link">View Enterprise Hub →</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Bulk Bakery Supply (Anim: Whisk Rotation) -->
+          <article class="service-card tilt-card anim-whisk">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_bulk_supply.webp" alt="Artisan croissants, baguettes, and fresh wholesale pastry baskets" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Bulk Bakery & HORECA Supply</h3>
+              <p class="service-desc">Daily scheduled morning drop-offs of viennoiserie, sourdough, and dessert bases for upscale cafés and restaurants.</p>
+              <a href="#enterprise" class="service-action-link">Request Wholesale Catalog →</a>
+            </div>
+          </article>
+
+          <!-- Card 5: Curated Gift Hampers (Anim: Sprinkles Falling) -->
+          <article class="service-card tilt-card anim-sprinkles">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_gift_hampers.webp" alt="Curated luxury gift hamper box with ribbons, cookies, and chocolate" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Gift Hampers & Festive Boxes</h3>
+              <p class="service-desc">Bespoke keepsake velvet hampers packed with artisanal tea cakes, spreads, dragées, and handcrafted confectionery.</p>
+              <a href="#book-now" class="service-action-link">Explore Hampers →</a>
+            </div>
+          </article>
+
+          <!-- Card 6: Cupcakes & Cookies (Anim: Cake Slice Float) -->
+          <article class="service-card tilt-card anim-slice">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_cupcakes_cookies.webp" alt="Gourmet cupcakes with swirls of buttercream and macarons" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">French Macarons & Cookies</h3>
+              <p class="service-desc">Delicate almond meringue shells filled with white chocolate ganache, plus chunky brown-butter artisan sea salt cookies.</p>
+              <a href="#book-now" class="service-action-link">Order Sweet Treats →</a>
+            </div>
+          </article>
+
+          <!-- Card 7: Chocolates & Confectionery (Anim: Frosting Drip) -->
+          <article class="service-card tilt-card anim-frosting">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_chocolates.webp" alt="Glossy hand-painted artisan chocolate bonbons and pralines" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Fine Chocolates & Confectionery</h3>
+              <p class="service-desc">Single-origin pralines, hand-tempered bonbons, rochers, and fruit pâte de fruits hand-crafted in small batches.</p>
+              <a href="#gallery" class="service-action-link">Discover Chocolates →</a>
+            </div>
+          </article>
+
+          <!-- Card 8: Masterclass Workshops (Anim: Whisk Rotation) -->
+          <article class="service-card tilt-card anim-whisk">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_workshops.webp" alt="Master pastry chef conducting baking masterclass with students" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Workshops & Baking Academy</h3>
+              <p class="service-desc">Hands-on masterclasses hosted in our central atelier covering French lamination, sugar work, and mirror glazing.</p>
+              <a href="#contact" class="service-action-link">Enroll in Academy →</a>
+            </div>
+          </article>
+
+          <!-- Card 9: Sweet Subscriptions (Anim: Gold Shimmer) -->
+          <article class="service-card tilt-card anim-gold-shine">
+            <div class="service-img-wrap">
+              <img src="../assets/images/services/service_subscriptions.webp" alt="Weekly breakfast croissant and dessert subscription box" loading="lazy" width="900" height="600">
+            </div>
+            <div class="service-body tilt-inner">
+              <h3 class="service-title">Weekly Sweet Subscriptions</h3>
+              <p class="service-desc">A curated weekend box of seasonal pastries, fresh brioche, and unreleased micro-batch pastries delivered to your door.</p>
+              <a href="#book-now" class="service-action-link">Join Pastry Club →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: ENTERPRISE HUB (HORECA SOLUTIONS, PLANS & COMPARISON)
+         ====================================================================== -->
+    <section id="enterprise" class="enterprise-section section-padding">
+      <div class="container">
+        
+        <!-- Enterprise Hero Banner -->
+        <div class="enterprise-banner">
+          <div class="enterprise-banner-content">
+            <div class="section-pill" style="background: rgba(201, 139, 75, 0.2); color: var(--honey-amber); border-color: rgba(201, 139, 75, 0.4);">
+              HORECA & Corporate Solutions
+            </div>
+            <h3>Enterprise Confectionery & <span>Bulk Supply Hub</span></h3>
+            <p>
+              We partner with luxury hotels, Michelin-starred establishments, boutique cafés, and corporate enterprises across the region to supply flawless daily baked goods, co-branded gifts, and dessert banquet lines.
+            </p>
+            <ul class="enterprise-perks-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Dedicated Key Account Manager & Chef Consultant
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Guaranteed 06:00 AM Temperature-Controlled Deliveries
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                GST Compliant Monthly Invoicing & Flexible Net-30 Terms
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                Complimentary Monthly Seasonal Tasting Box for Executive Chefs
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>Request Corporate Tasting Session</span>
+            </a>
+          </div>
+
+          <div class="enterprise-banner-image">
+            <img src="../assets/images/enterprise/enterprise_hotel.webp" alt="Luxury hotel dining room with gourmet dessert buffet presentation" loading="lazy" width="900" height="600">
+          </div>
+        </div>
+
+        <!-- Enterprise Plans / Tier Cards (3D Tilt & Center Aligned) -->
+        <div class="section-header">
+          <div class="section-pill">Tiered Solutions</div>
+          <h2 class="section-title">Enterprise Partnership <span>Tiers</span></h2>
+          <p class="section-desc">Select the right operational model for your business scale and frequency.</p>
+        </div>
+
+        <div class="tier-cards-grid">
+          
+          <!-- Tier 1: Café Partner -->
+          <div class="tier-card tilt-card">
+            <div class="tilt-inner">
+              <div class="tier-header">
+                <h3 class="tier-name">Café Partner</h3>
+                <p class="tier-subhead">For local specialty coffee bars</p>
+              </div>
+              <div class="tier-price">$450 <span>/ mo min</span></div>
+              <ul class="tier-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Daily morning viennoiserie dispatch</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 15% wholesale discount off retail</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Standard insulated packaging</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Weekly invoice billing</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline" style="width: 100%;">Choose Partner</a>
+            </div>
+          </div>
+
+          <!-- Tier 2: HORECA & Hotel Elite (Featured) -->
+          <div class="tier-card featured tilt-card anim-gold-shine">
+            <span class="tier-badge">Most Popular</span>
+            <div class="tilt-inner">
+              <div class="tier-header">
+                <h3 class="tier-name">HORECA Elite</h3>
+                <p class="tier-subhead">For luxury boutique hotels & fine dining</p>
+              </div>
+              <div class="tier-price">$1,400 <span>/ mo min</span></div>
+              <ul class="tier-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Twice-daily chilled supply runs</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 25% wholesale tier pricing</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom flavor & recipe formulation</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Net-30 credit invoicing terms</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary" style="width: 100%;">Partner with Elite</a>
+            </div>
+          </div>
+
+          <!-- Tier 3: Corporate Suite -->
+          <div class="tier-card tilt-card">
+            <div class="tilt-inner">
+              <div class="tier-header">
+                <h3 class="tier-name">Corporate Suite</h3>
+                <p class="tier-subhead">For multinationals & event agencies</p>
+              </div>
+              <div class="tier-price">Custom <span>Quotes</span></div>
+              <ul class="tier-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Bespoke branded chocolate & gift boxes</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Multi-location simultaneous delivery</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Dedicated 24/7 Concierge Manager</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Custom dietary fulfillment for 500+ guests</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline" style="width: 100%;">Inquire Suite</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Feature Comparison Table -->
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col">Enterprise Feature</th>
+                <th scope="col">Café Partner</th>
+                <th scope="col">HORECA Elite</th>
+                <th scope="col">Corporate Suite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wholesale Margin Discount</td>
+                <td>15% Off</td>
+                <td>25% Off</td>
+                <td>Up to 35% Volume Off</td>
+              </tr>
+              <tr>
+                <td>Daily Scheduled Delivery Run</td>
+                <td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> (1x Morning)</td>
+                <td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> (2x Morning/Eve)</td>
+                <td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> On-Demand Flexible</td>
+              </tr>
+              <tr>
+                <td>Custom Logo & Packaging Embossing</td>
+                <td><svg class="dash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"/></svg></td>
+                <td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></td>
+                <td><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Complete Co-branding</td>
+              </tr>
+              <tr>
+                <td>Dedicated Account Manager</td>
+                <td>Email Support</td>
+                <td>Direct Phone & WhatsApp</td>
+                <td>Dedicated Chef Concierge</td>
+              </tr>
+              <tr>
+                <td>Credit Payment Terms</td>
+                <td>Net-7</td>
+                <td>Net-30</td>
+                <td>Net-60 / Custom PO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: GALLERY & LIGHTBOX (FILTERABLE GRID, UNIQUE HIGH-RES IMAGES)
+         ====================================================================== -->
+    <section id="gallery" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">Visual Repertoire</div>
+          <h2 class="section-title">The Pâtisserie <span>Gallery</span></h2>
+          <p class="section-desc">
+            A curated showcase of our recent artistic confections, hand-sculpted sugar flowers, and layered viennoiserie.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="gallery-filter-nav">
+          <button type="button" class="filter-btn active" data-filter="all">All Confections</button>
+          <button type="button" class="filter-btn" data-filter="cakes">Designer Cakes</button>
+          <button type="button" class="filter-btn" data-filter="pastries">Artisan Pastries</button>
+          <button type="button" class="filter-btn" data-filter="cookies">Macarons & Cookies</button>
+          <button type="button" class="filter-btn" data-filter="chocolates">Fine Chocolates</button>
+          <button type="button" class="filter-btn" data-filter="wedding">Wedding & Grand Tiers</button>
+        </div>
+
+        <!-- Gallery Grid (10 Unique Photos, Local WebP) -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <div class="gallery-item" data-category="cakes" data-title="Rose Velvet & Berry Crown">
+            <img src="../assets/images/gallery/cake_rose_velvet.webp" alt="Rose Velvet cake decorated with fresh berries" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Rose Velvet & Berry Crown</div>
+              <div class="gallery-item-category">Designer Cakes</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cakes" data-title="Belgian Chocolate Drip & Fig Tower">
+            <img src="../assets/images/gallery/cake_chocolate_drip.webp" alt="Chocolate drip cake topped with fresh figs and berries" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Belgian Chocolate Drip & Fig</div>
+              <div class="gallery-item-category">Designer Cakes</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pastries" data-title="Artisan French Berry Tartlet">
+            <img src="../assets/images/gallery/pastry_fruit_tart.webp" alt="Fresh artisan fruit tart with glossy glaze" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Artisan Berry Tartlet</div>
+              <div class="gallery-item-category">Artisan Pastries</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pastries" data-title="Pistachio & Chocolate Éclairs">
+            <img src="../assets/images/gallery/pastry_pistachio_eclair.webp" alt="Gourmet eclairs with pistachio glaze" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Pistachio & Chocolate Éclairs</div>
+              <div class="gallery-item-category">Artisan Pastries</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cookies" data-title="Pastel Rainbow Macaron Cascade">
+            <img src="../assets/images/gallery/cookie_macarons_rainbow.webp" alt="French macarons in assorted pastel colors" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Pastel Macaron Cascade</div>
+              <div class="gallery-item-category">Macarons & Cookies</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cookies" data-title="Brown-Butter Sea Salt Sablés">
+            <img src="../assets/images/gallery/cookie_artisan_biscuits.webp" alt="Artisan chocolate chip cookies with sea salt flakes" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Sea Salt Brown-Butter Sablés</div>
+              <div class="gallery-item-category">Macarons & Cookies</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="chocolates" data-title="Single-Origin Praline Bonbons">
+            <img src="../assets/images/gallery/chocolates_artisan_pralines.webp" alt="Artisan chocolate bonbons in assorted flavors" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Single-Origin Praline Bonbons</div>
+              <div class="gallery-item-category">Fine Chocolates</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="chocolates" data-title="Truffle & Dark Cocoa Ganache Tower">
+            <img src="../assets/images/gallery/chocolates_truffle_tower.webp" alt="Handcrafted dark chocolate truffles dusted with cocoa" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Dark Cocoa Ganache Truffles</div>
+              <div class="gallery-item-category">Fine Chocolates</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="wedding" data-title="Cascade Botanical Wedding Tier">
+            <img src="../assets/images/gallery/wedding_floral_cascade.webp" alt="Grand tiered wedding cake adorned with sugar flowers" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Cascade Botanical Wedding Tier</div>
+              <div class="gallery-item-category">Wedding & Grand Tiers</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="wedding" data-title="Royal Gold Leaf Grand Pavilion Tier">
+            <img src="../assets/images/gallery/wedding_golden_tier.webp" alt="Four-tiered white and gold wedding cake" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Royal 24K Gold Leaf Tier</div>
+              <div class="gallery-item-category">Wedding & Grand Tiers</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="pastries" data-title="Fresh Flaky Viennoiserie Basket">
+            <img src="../assets/images/gallery/pastry_croissant_basket.webp" alt="Basket of freshly baked artisan French butter croissants" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Viennoiserie Croissant Basket</div>
+              <div class="gallery-item-category">Artisan Pastries</div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="cakes" data-title="Belgian Truffle & Gold Crown Cake">
+            <img src="../assets/images/gallery/cake_chocolate_truffle.webp" alt="Bespoke Belgian dark chocolate truffle cake" loading="lazy" width="800" height="800">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Belgian Truffle & Gold Crown</div>
+              <div class="gallery-item-category">Designer Cakes</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Accessible Lightbox Modal -->
+    <div id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+      <div class="lightbox-content">
+        <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Close Lightbox">×</button>
+        <div class="lightbox-img-wrap">
+          <img id="lightboxImg" src="../assets/images/gallery/cake_rose_velvet.webp" alt="Cake detail">
+        </div>
+        <div class="lightbox-meta">
+          <div>
+            <h3 id="lightboxTitle" style="font-size: 1.35rem; margin-bottom: 2px;">Rose Velvet & Berry Crown</h3>
+            <span id="lightboxCategory" style="font-size: 0.8rem; color: var(--caramel-gold); font-weight: 700;">DESIGNER CAKES</span>
+          </div>
+          <button type="button" class="btn btn-primary" id="lightboxOrderBtn" style="padding: 10px 20px; font-size: 0.88rem; min-height: 40px;">
+            Order This Design
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         SECTION 6: PROCESS TIMELINE (Choose -> Customize -> Bake -> Decorate -> Deliver)
+         ====================================================================== -->
+    <section class="section-padding" style="background: #FFFDF9;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">Our Method</div>
+          <h2 class="section-title">The Artisan <span>Journey</span></h2>
+          <p class="section-desc">How your bespoke confection transforms from farm-fresh raw ingredients into a breathtaking celebration centerpiece.</p>
+        </div>
+
+        <div class="process-timeline">
+          
+          <div class="process-step-card tilt-card">
+            <div class="process-step-number">1</div>
+            <img src="../assets/images/process/step_choose.webp" alt="Consulting with clients and choosing cake flavors" class="process-img" loading="lazy" width="600" height="450">
+            <h4>1. Envision & Choose</h4>
+            <p>Select your preferred flavor profile, size, and dietary specifications online or in studio.</p>
+          </div>
+
+          <div class="process-step-card tilt-card">
+            <div class="process-step-number">2</div>
+            <img src="../assets/images/process/step_recipe.webp" alt="Artisan pastry recipe formulation and weighing ingredients" class="process-img" loading="lazy" width="600" height="450">
+            <h4>2. Custom Formulation</h4>
+            <p>Recipes are precision-scaled with French T55 flours, Valrhona cocoa, and fresh fruit purees.</p>
+          </div>
+
+          <div class="process-step-card tilt-card">
+            <div class="process-step-number">3</div>
+            <img src="../assets/images/process/step_bake.webp" alt="Slow proofing and baking in stone-deck artisan ovens" class="process-img" loading="lazy" width="600" height="450">
+            <h4>3. Slow-Proof & Bake</h4>
+            <p>Gentle baking in stone-deck ovens preserves velvety crumb moisture and natural aroma.</p>
+          </div>
+
+          <div class="process-step-card tilt-card">
+            <div class="process-step-number">4</div>
+            <img src="../assets/images/process/step_decorate.webp" alt="Hand decorating with gold leaf and sugar flowers" class="process-img" loading="lazy" width="600" height="450">
+            <h4>4. Decorate & Gild</h4>
+            <p>Master pastry artists apply smooth ganache finishes, piped inscriptions, and 24K gold foil.</p>
+          </div>
+
+          <div class="process-step-card tilt-card">
+            <div class="process-step-number">5</div>
+            <img src="../assets/images/process/step_deliver.webp" alt="Zero tilt delivery van driver handing luxury hat box to client" class="process-img" loading="lazy" width="600" height="450">
+            <h4>5. Climate Delivery</h4>
+            <p>Dispatched in gyroscopic zero-tilt chilled vans directly to your venue doorstep.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: TESTIMONIALS SLIDER
+         ====================================================================== -->
+    <section class="testimonials-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">Praise & Recognition</div>
+          <h2 class="section-title">Words from <span>Sweet Celebrations</span></h2>
+          <p class="section-desc">Read reviews from couples, corporate planners, and food critics who trust BakeStudio.</p>
+        </div>
+
+        <div class="testimonials-slider-wrap">
+          <div class="testimonials-track" id="testimonialsTrack">
+            
+            <!-- Slide 1 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card tilt-card">
+                <div class="testimonial-avatar">
+                  <img src="../assets/images/testimonials/avatar_sophia.webp" alt="Sophia Chen portrait" width="300" height="300">
+                </div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "The interactive cake customizer allowed our wedding committee to visualize the tiered pistachio design before ordering. On the wedding night, the structure and flavor were beyond perfection."
+                </blockquote>
+                <div class="testimonial-author">Sophia Chen</div>
+                <div class="testimonial-role">Grand Gala Wedding Planner, St. Regis</div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card tilt-card">
+                <div class="testimonial-avatar">
+                  <img src="../assets/images/testimonials/avatar_david.webp" alt="David Sterling portrait" width="300" height="300">
+                </div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "As an enterprise hotel buyer, reliability is everything. BakeStudio delivers 350 identical, crisp croissants to our breakfast pantry every morning by 06:15 AM without exception. Their Net-30 invoicing is seamless."
+                </blockquote>
+                <div class="testimonial-author">David Sterling</div>
+                <div class="testimonial-role">Executive F&B Director, Luxury Hotel Collection</div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card tilt-card">
+                <div class="testimonial-avatar">
+                  <img src="../assets/images/testimonials/avatar_emily.webp" alt="Emily Watson portrait" width="300" height="300">
+                </div>
+                <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "Finding a 100% eggless gourmet cake that actually melts in your mouth used to be impossible. The Belgian truffle with 24K gold foil was stunning and arrived in a climate-controlled box with a personalized letter."
+                </blockquote>
+                <div class="testimonial-author">Emily Watson</div>
+                <div class="testimonial-role">Private Client, 30th Birthday Celebration</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls -->
+          <div class="slider-controls">
+            <button type="button" class="slider-btn" id="testiPrevBtn" aria-label="Previous Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="slider-dots" id="testiDots"></div>
+            <button type="button" class="slider-btn" id="testiNextBtn" aria-label="Next Testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: ABOUT US & CHEF TEAM
+         ====================================================================== -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        
+        <div class="about-hero-grid">
+          <div class="about-img-collage">
+            <div class="about-main-img">
+              <img src="../assets/images/team/bakery_atelier.webp" alt="BakeStudio Artisan bakery production atelier kitchen" loading="lazy" width="900" height="600">
+            </div>
+          </div>
+
+          <div>
+            <div class="section-pill">Our Heritage</div>
+            <h2 class="section-title">Where Classical French <span>Pastry Meets Modern Design</span></h2>
+            <p style="margin-bottom: 20px; font-size: 1.05rem;">
+              Founded in 2011 by Master Pâtissier Antoine Laurent, BakeStudio began with a singular obsession: to eliminate compromise in pastry. We reject artificial flavor enhancers, hydrogenated shortenings, and frozen premixes.
+            </p>
+            <p style="margin-bottom: 24px; font-size: 1.05rem;">
+              Today, our state-of-the-art studio bridges the gap between artisanal culinary artistry and digital convenience. With our interactive cake builder and enterprise distribution fleet, we empower clients to design and receive bespoke confections with absolute peace of mind.
+            </p>
+            <div class="about-stats-strip">
+              <div class="about-stat-box">
+                <h4 class="about-stat-num">100%</h4>
+                <p class="about-stat-label">Organic Normandy Butter</p>
+              </div>
+              <div class="about-stat-box">
+                <h4 class="about-stat-num">Zero</h4>
+                <p class="about-stat-label">Synthetic Emulsifiers</p>
+              </div>
+              <div class="about-stat-box">
+                <h4 class="about-stat-num">4°C</h4>
+                <p class="about-stat-label">Calibrated Cold Chain</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Chefs Grid (3D Tilt & Center Aligned) -->
+        <div class="section-header" style="margin-bottom: 40px;">
+          <div class="section-pill">Artisan Guild</div>
+          <h3 class="section-title" style="font-size: 2.2rem;">Meet the <span>Master Pâtissiers</span></h3>
+          <p class="section-desc">Trained in Paris and Lyon, our culinary directors lead a team of 35 dedicated sugar sculptors and chocolatiers.</p>
+        </div>
+
+        <div class="team-grid">
+          
+          <div class="team-card tilt-card anim-whisk">
+            <div class="team-img-wrap">
+              <img src="../assets/images/team/chef_antoine.webp" alt="Master Executive Pastry Chef Antoine" loading="lazy" width="600" height="750">
+            </div>
+            <div class="team-body tilt-inner">
+              <h4 class="team-name">Antoine Laurent</h4>
+              <div class="team-role">Founder & Executive Pastry Chef</div>
+              <p class="team-bio">Alumnus of Ferrandi Paris. 2-time National Sugar Craft Laureate specializing in lamination and botanical sugar work.</p>
+            </div>
+          </div>
+
+          <div class="team-card tilt-card anim-gold-shine">
+            <div class="team-img-wrap">
+              <img src="../assets/images/team/chef_elena.webp" alt="Head Sculptural Cake Artist Elena" loading="lazy" width="600" height="750">
+            </div>
+            <div class="team-body tilt-inner">
+              <h4 class="team-name">Elena Rostova</h4>
+              <div class="team-role">Head Cake Sculptor & Visual Director</div>
+              <p class="team-bio">Fine arts sculptor turned confectioner. Master of hand-painted wafer paper florals, palette knife textures, and geometric tiers.</p>
+            </div>
+          </div>
+
+          <div class="team-card tilt-card anim-frosting">
+            <div class="team-img-wrap">
+              <img src="../assets/images/team/chef_marcus.webp" alt="Master Chocolatier Marcus" loading="lazy" width="600" height="750">
+            </div>
+            <div class="team-body tilt-inner">
+              <h4 class="team-name">Marcus Vance</h4>
+              <div class="team-role">Master Chocolatier & R&D Lead</div>
+              <p class="team-bio">Directs single-origin bean sourcing from Ecuador and Madagascar. Innovator behind our signature eggless ganache formulations.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hygiene & Certification Badges Strip -->
+        <div class="certifications-strip">
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="cert-info">
+              <h5>FSSAI Grade A+</h5>
+              <p>Top Hygiene & Safety Rating</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            </div>
+            <div class="cert-info">
+              <h5>ISO 22000:2018</h5>
+              <p>Food Safety Management Certified</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="cert-info">
+              <h5>HACCP Certified Kitchen</h5>
+              <p>Critical Control Point Audited Daily</p>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="cert-info">
+              <h5>100% Zero Cross-Contam</h5>
+              <p>Dedicated Clean Eggless Lines</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 9: ACCESSIBLE FAQ ACCORDION
+         ====================================================================== -->
+    <section class="section-padding" style="background: #FFFDF9;">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">Inquiries & Answers</div>
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+          <p class="section-desc">Everything you need to know about custom bookings, ingredient standards, and delivery protocols.</p>
+        </div>
+
+        <div class="faq-wrap">
+          
+          <div class="faq-card open">
+            <button type="button" class="faq-header-btn" aria-expanded="true">
+              <span>How far in advance do I need to book custom or wedding cakes?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                Standard designer cakes can be booked through our interactive builder with as little as 24 to 48 hours notice. For elaborate multi-tier wedding cakes requiring sugar flower sculpting and structural armature, we recommend reserving your delivery slot 2 to 4 weeks in advance.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header-btn" aria-expanded="false">
+              <span>How do you handle dietary options like 100% Eggless, Vegan, and Nut Allergies?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                We operate a physically isolated eggless and plant-based baking bay with dedicated stone ovens, stand mixers, and spatulas. We use pure European flax and plant-derived emulsifiers to achieve a tender, moist sponge without any egg traces.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header-btn" aria-expanded="false">
+              <span>What is your insulated delivery radius and temperature protocol?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                Our proprietary fleet of zero-tilt delivery vans maintains an interior temperature of 4°C to 6°C regardless of outside summer weather. We service all addresses within a 45 km radius of our central atelier with real-time SMS driver tracking.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header-btn" aria-expanded="false">
+              <span>How does corporate enterprise billing and recurring delivery work?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                Cafés, hotels, and corporate offices can register for an enterprise account via our Enterprise Hub. We provide itemized GST tax invoices, PO matching, volume discount tiers (up to 35% off retail), and Net-30 credit terms.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button type="button" class="faq-header-btn" aria-expanded="false">
+              <span>Can I submit reference photos for custom designs outside the builder?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-content">
+              <p>
+                Yes! You can complete your flavor and size specifications in the online builder and upload reference moodboards or invite sketches directly in the contact form or via WhatsApp chat with our Head Sculptor.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 10: NEWSLETTER (MAILCHIMP / CONVERTKIT READY)
+         ====================================================================== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="section-pill" style="background: rgba(201, 139, 75, 0.2); color: var(--honey-amber); border-color: rgba(201, 139, 75, 0.4);">
+            The Pâtisserie Society
+          </div>
+          <h3>Join the <span>Secret Tasting Club</span></h3>
+          <p>
+            Receive 15% off your first custom reservation, plus invitations to private seasonal tasting menus and secret micro-batch pastry drops before public release.
+          </p>
+
+          <form id="newsletterForm" class="newsletter-form">
+            <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-primary">
+              Subscribe Free
+            </button>
+          </form>
+          <p style="font-size: 0.78rem; color: rgba(255, 255, 255, 0.5); margin-top: 14px;">
+            No spam, ever. Unsubscribe with 1-click anytime.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 11: CONTACT US (VALIDATED FORMSPREE / NETLIFY COMPATIBLE + MAP)
+         ====================================================================== -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-pill">Get in Touch</div>
+          <h2 class="section-title">Connect with Our <span>Master Concierge</span></h2>
+          <p class="section-desc">Visit our central atelier tasting salon, schedule an enterprise consultation, or discuss wedding commissions.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            
+            <div class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h4>Central Atelier & Tasting Salon</h4>
+                <p>742 Pâtisserie Boulevard, Atelier Suite 10, Metro City, NY 10001</p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h4>Concierge Telephone & WhatsApp</h4>
+                <p>Studio: +1 (800) 555-CAKE &nbsp;|&nbsp; WhatsApp: +1 (555) 342-9871</p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-icon-bubble">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h4>Hours of Operation</h4>
+                <p>Monday – Saturday: 07:30 AM – 09:00 PM<br>Sunday: 08:30 AM – 07:00 PM (Delivery active until 11 PM)</p>
+              </div>
+            </div>
+
+            <!-- Interactive Map Mockup Card -->
+            <div class="map-card-mockup" title="BakeStudio Atelier Central Location Map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1650000000000!5m2!1sen!2sus" width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bakery Atelier Map"></iframe>
+            </div>
+
+          </div>
+
+          <!-- Contact Form (Formspree / Netlify compatible) -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Direct Atelier Inquiry</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 24px;">
+              Our Executive Concierge will review your inquiry and respond within 2 hours.
+            </p>
+
+            <form id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="form-group">
+                  <label for="contactFullName" class="form-label">Your Name <span class="required">*</span></label>
+                  <input type="text" id="contactFullName" name="name" class="form-input" placeholder="E.g. Olivia Sterling" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmailAddr" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="contactEmailAddr" name="email" class="form-input" placeholder="olivia@domain.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactInquiryType" class="form-label">Nature of Inquiry</label>
+                  <select id="contactInquiryType" name="inquiry_type" class="form-select">
+                    <option value="custom_order">Custom Cake / Confectionery Commission</option>
+                    <option value="enterprise">Corporate & HORECA Partnership</option>
+                    <option value="wedding">Wedding Tasting Reservation</option>
+                    <option value="academy">Baking Academy Workshop Enrollment</option>
+                    <option value="feedback">General Inquiries & Feedback</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessageText" class="form-label">Your Message or Event Specifications <span class="required">*</span></label>
+                  <textarea id="contactMessageText" name="message" class="form-textarea" rows="4" placeholder="Tell us about your celebration date, guest count, design theme, or wholesale requirements..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+                  Send Inquiry to Concierge
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       SECTION 12: FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M5.5 23.5H26.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M7 23.5C7 14.5 10.8 8.5 16 8.5C21.2 8.5 25 14.5 25 23.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+                <path d="M16 9V20.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M16 9C12.8 9 10.8 12.8 10.8 16.5C10.8 19.2 13 21 16 21.8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M16 9C19.2 9 21.2 12.8 21.2 16.5C21.2 19.2 19 21 16 21.8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M16 11.5C14.2 11.5 13.2 13.8 13.2 16.2C13.2 18 14.4 19.2 16 19.8" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" />
+                <path d="M16 11.5C17.8 11.5 18.8 13.8 18.8 16.2C18.8 18 17.6 19.2 16 19.8" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" />
+                <path d="M13.5 22.8H18.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M16 22.8V25.2" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+                <circle cx="16" cy="26" r="1.1" fill="#FFFFFF" />
+                <path d="M16 2.2L16.8 4.4L19 5.2L16.8 6L16 8.2L15.2 6L13 5.2L15.2 4.4Z" fill="#FFE0A3" />
+                <circle cx="8.5" cy="11.5" r="0.9" fill="#FFE0A3" opacity="0.85" />
+                <circle cx="23.5" cy="11.5" r="0.9" fill="#FFE0A3" opacity="0.85" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <div class="brand-title">Bake<span>Studio</span></div>
+              <span class="brand-tagline">Haute Pâtisserie</span>
+            </div>
+          </div>
+          <p>
+            An award-winning haute pâtisserie and confectionery solutions hub. Handcrafting bespoke celebration centerpieces and providing enterprise wholesale dessert solutions for discerning clients worldwide.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12a4 4 0 1 1 8 0 4 4 0 0 1-8 0z"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Studio Navigation -->
+        <div class="footer-col">
+          <h4>Studio Menu</h4>
+          <ul class="footer-links">
+            <li><a href="#book-now">Interactive Cake Customizer</a></li>
+            <li><a href="#book-now">Real-Time Price Calculator</a></li>
+            <li><a href="#book-now">Delivery Slot Reservation</a></li>
+            <li><a href="#services">Artisan Viennoiserie</a></li>
+            <li><a href="#services">French Macaron Collections</a></li>
+            <li><a href="#gallery">Visual Gallery & Portfolio</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Enterprise & B2B -->
+        <div class="footer-col">
+          <h4>Enterprise Hub</h4>
+          <ul class="footer-links">
+            <li><a href="#enterprise">HORECA Wholesale Solutions</a></li>
+            <li><a href="#enterprise">Hotel Breakfast Viennoiserie</a></li>
+            <li><a href="#enterprise">Corporate Gifting Hampers</a></li>
+            <li><a href="#enterprise">GST Invoicing & Net-30</a></li>
+            <li><a href="coming-soon.html">Baking Masterclasses</a></li>
+            <li><a href="404.html">Support Knowledge Base</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Hygiene & Atelier Info -->
+        <div class="footer-col">
+          <h4>Certifications</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 14px;">
+            FSSAI License: 10022011000842<br>
+            ISO 22000:2018 Certified Facility<br>
+            HACCP Controlled Clean Rooms
+          </p>
+          <div style="background: rgba(255, 255, 255, 0.08); padding: 12px; border-radius: var(--radius-sm); border: 1px solid rgba(201, 139, 75, 0.3);">
+            <div style="font-size: 0.82rem; color: var(--honey-amber); font-weight: 700;">Zero-Tilt Express Delivery</div>
+            <div style="font-size: 0.78rem; color: var(--rose-cream);">Daily routes covering 45 km radius</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <p>© 2026 BakeStudio. All rights reserved.</p>
+        <div class="payment-badges-row">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">AMEX</span>
+          <span class="payment-badge">APPLE PAY</span>
+          <span class="payment-badge">STRIPE</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       AUTH MODAL: LOGIN / SIGN UP (BAKER / ADMIN / CUSTOMER ROLES)
+       ====================================================================== -->
+  <div id="authModal" role="dialog" aria-modal="true" aria-label="Sign In Modal">
+    <div class="auth-modal-card">
+      <button type="button" class="auth-close-btn" id="authCloseBtn" aria-label="Close login modal">×</button>
+      
+      <div style="text-align: center;">
+        <h3 style="font-size: 1.8rem; margin-bottom: 4px;">Studio Access Portal</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Sign in to access your dashboard, order tracking, or kitchen queue.</p>
+      </div>
+
+      <!-- Role Tabs -->
+      <div class="role-selector-tabs">
+        <button type="button" class="role-tab-btn active" data-role="baker">Baker / Chef</button>
+        <button type="button" class="role-tab-btn" data-role="admin">Studio Admin</button>
+        <button type="button" class="role-tab-btn" data-role="customer">Customer</button>
+      </div>
+
+      <!-- 1-Click Demo Credentials Quick Bar -->
+      <div class="demo-creds-strip">
+        <div class="demo-creds-title">⚡ 1-Click Demo Credentials:</div>
+        <div>
+          <button type="button" class="demo-click-btn" data-demo-role="baker" data-demo-email="baker@patisserie.com" data-demo-pass="baker123">Baker Demo</button>
+          <button type="button" class="demo-click-btn" data-demo-role="admin" data-demo-email="admin@patisserie.com" data-demo-pass="admin123">Admin Demo</button>
+          <button type="button" class="demo-click-btn" data-demo-role="customer" data-demo-email="sarah@customer.com" data-demo-pass="customer123">Customer Demo</button>
+        </div>
+      </div>
+
+      <form id="loginForm">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="form-group">
+            <label for="authEmail" class="form-label">Email Address</label>
+            <input type="email" id="authEmail" class="form-input" value="baker@patisserie.com" required>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label for="authPassword" class="form-label">Password</label>
+              <button type="button" id="togglePasswordView" style="font-size: 0.78rem; color: var(--caramel-gold); font-weight: 700;">Show</button>
+            </div>
+            <input type="password" id="authPassword" class="form-input" value="baker123" required>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            Sign In to Dashboard
+          </button>
+        </div>
+      </form>
+
+      <div style="text-align: center; margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
+        Need help? <a href="#contact" style="color: var(--caramel-gold); font-weight: 700;">Contact Master Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       IN-PAGE DASHBOARD OVERLAY (BAKER & CUSTOMER INTEGRATED SYSTEM)
+       ====================================================================== -->
+  <div id="dashboardOverlay" role="region" aria-label="Baker & Customer Management Dashboard">
+    
+    <!-- Dashboard Top Bar -->
+    <header class="dash-header">
+      <div class="dash-header-left">
+        <!-- Mobile Sidebar Drawer Toggle Button -->
+        <button type="button" class="dash-menu-toggle-btn" id="dashMobileNavToggle" aria-label="Toggle Dashboard Menu" title="Open Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <a href="#home" class="brand-logo" id="dashBrandLogo" aria-label="BakeStudio Home">
+          <div class="brand-icon">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M5.5 23.5H26.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M7 23.5C7 14.5 10.8 8.5 16 8.5C21.2 8.5 25 14.5 25 23.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M16 9V20.5" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M16 9C12.8 9 10.8 12.8 10.8 16.5C10.8 19.2 13 21 16 21.8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M16 9C19.2 9 21.2 12.8 21.2 16.5C21.2 19.2 19 21 16 21.8" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M16 11.5C14.2 11.5 13.2 13.8 13.2 16.2C13.2 18 14.4 19.2 16 19.8" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" />
+              <path d="M16 11.5C17.8 11.5 18.8 13.8 18.8 16.2C18.8 18 17.6 19.2 16 19.8" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" />
+              <path d="M13.5 22.8H18.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" />
+              <path d="M16 22.8V25.2" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" />
+              <circle cx="16" cy="26" r="1.1" fill="#FFFFFF" />
+              <path d="M16 2.2L16.8 4.4L19 5.2L16.8 6L16 8.2L15.2 6L13 5.2L15.2 4.4Z" fill="#FFE0A3" />
+              <circle cx="8.5" cy="11.5" r="0.9" fill="#FFE0A3" opacity="0.85" />
+              <circle cx="23.5" cy="11.5" r="0.9" fill="#FFE0A3" opacity="0.85" />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <div class="brand-title">Bake<span>Studio</span></div>
+            <span class="brand-tagline">Kitchen Control</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="dash-header-right">
+        <div class="dash-user-profile">
+          <div class="dash-user-avatar" id="dashUserAvatar">A</div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.9rem;" id="dashUserName">Chef Antoine Laurent</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted);">Senior Executive Pâtissier</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Backdrop for Mobile Drawer -->
+    <div class="dash-sidebar-backdrop" id="dashSidebarBackdrop"></div>
+
+    <!-- Dashboard Body -->
+    <div class="dash-layout-body">
+      
+      <!-- Dashboard Left Sidebar / Off-Canvas Mobile Drawer -->
+      <aside class="dash-sidebar">
+        <!-- Mobile Sidebar Drawer Header -->
+        <div class="dash-sidebar-top-bar">
+          <div class="dash-sidebar-brand">
+            <span class="dash-sidebar-title">BakeStudio</span>
+            <span class="dash-sidebar-subtitle">Kitchen Control</span>
+          </div>
+          <button type="button" class="dash-sidebar-close-btn" id="dashSidebarCloseBtn" aria-label="Close Navigation Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Baker / Admin Nav Menu -->
+        <ul class="dash-menu-list" id="dashBakerNav">
+          <li class="dash-nav-item active" data-dash-tab="tabBakerOverview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Overview & Stats
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabBakerOrders">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Bookings & Orders
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabBakerKanban">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
+            Baking Queue (Kanban)
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabBakerInventory">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            Inventory & Ingredients
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabBakerPricing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Live Menu & Pricing
+          </li>
+        </ul>
+
+        <!-- Customer Nav Menu -->
+        <ul class="dash-menu-list" id="dashCustomerNav" style="display: none;">
+          <li class="dash-nav-item active" data-dash-tab="tabCustomerTracker">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+            Live Order Tracking
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabCustomerHistory">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+            Order History
+          </li>
+          <li class="dash-nav-item" data-dash-tab="tabCustomerDesigns">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Saved Cake Designs
+          </li>
+        </ul>
+
+        <!-- Sidebar Footer / Logout -->
+        <div class="dash-sidebar-footer" style="padding-top: 16px; border-top: 1px solid var(--border-caramel); display: flex; flex-direction: column; gap: 12px;">
+          <button type="button" class="btn btn-dark" id="dashLogoutBtn" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.88rem; min-height: 40px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            Logout
+          </button>
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-align: center;">
+            Atelier Hub v2.8 PRO<br>Connected to Local Mock DB
+          </div>
+        </div>
+      </aside>
+
+      <!-- Dashboard Main Scroll Content -->
+      <main class="dash-main-scroll">
+        
+        <!-- BAKER TAB 1: OVERVIEW & STATS -->
+        <div class="dash-view-tab active" id="tabBakerOverview">
+          <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 1.8rem;">Daily Production Command Center</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Real-time metrics from our central ovens and cold fleet.</p>
+          </div>
+
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+              </div>
+              <div>
+                <div class="dash-stat-number" id="statTodayOrders">4</div>
+                <div class="dash-stat-title">Active Orders Today</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="color: #2E7D32; background: #E8F5E9;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <div class="dash-stat-number" id="statTodayRevenue">$586</div>
+                <div class="dash-stat-title">Today's Revenue</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="color: #E65100; background: #FFF3E0;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M8 5a6 6 0 0 0 0 12M16 5a6 6 0 0 1 0 12"/></svg>
+              </div>
+              <div>
+                <div class="dash-stat-number" id="statInOven">2</div>
+                <div class="dash-stat-title">In Baking & Decorating</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="dash-stat-icon" style="color: #1565C0; background: #E3F2FD;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/></svg>
+              </div>
+              <div>
+                <div class="dash-stat-number" id="statDelivered">1</div>
+                <div class="dash-stat-title">Dispatched & Delivered</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Trends SVG Chart -->
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-caramel); border-radius: var(--radius-md); padding: 24px; margin-bottom: 30px;">
+            <h4 style="font-size: 1.15rem; margin-bottom: 6px;">7-Day Confectionery Demand & Revenue Velocity</h4>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Tracking peak weekend bookings vs weekday corporate subscriptions.</p>
+            
+            <svg viewBox="0 0 800 200" style="width: 100%; height: auto; max-height: 200px;">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#C98B4B" stop-opacity="0.4"/>
+                  <stop offset="100%" stop-color="#C98B4B" stop-opacity="0.0"/>
+                </linearGradient>
+              </defs>
+              <line x1="40" y1="160" x2="760" y2="160" stroke="rgba(74,44,32,0.1)" stroke-width="1"/>
+              <line x1="40" y1="100" x2="760" y2="100" stroke="rgba(74,44,32,0.1)" stroke-width="1"/>
+              <line x1="40" y1="40" x2="760" y2="40" stroke="rgba(74,44,32,0.1)" stroke-width="1"/>
+              
+              <polygon points="60,140 160,120 260,110 360,80 460,95 560,45 660,35 740,50 740,160 60,160" fill="url(#chartGrad)"/>
+              <polyline points="60,140 160,120 260,110 360,80 460,95 560,45 660,35 740,50" fill="none" stroke="#C98B4B" stroke-width="3" stroke-linecap="round"/>
+              
+              <circle cx="60" cy="140" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="160" cy="120" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="260" cy="110" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="360" cy="80" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="460" cy="95" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="560" cy="45" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="660" cy="35" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+              <circle cx="740" cy="50" r="5" fill="#2B1A14" stroke="#C98B4B" stroke-width="2"/>
+
+              <text x="60" y="180" font-size="12" fill="#826B63" text-anchor="middle">Mon</text>
+              <text x="160" y="180" font-size="12" fill="#826B63" text-anchor="middle">Tue</text>
+              <text x="260" y="180" font-size="12" fill="#826B63" text-anchor="middle">Wed</text>
+              <text x="360" y="180" font-size="12" fill="#826B63" text-anchor="middle">Thu</text>
+              <text x="460" y="180" font-size="12" fill="#826B63" text-anchor="middle">Fri</text>
+              <text x="560" y="180" font-size="12" fill="#826B63" text-anchor="middle">Sat</text>
+              <text x="660" y="180" font-size="12" fill="#826B63" text-anchor="middle">Sun</text>
+              <text x="740" y="180" font-size="12" fill="#826B63" text-anchor="middle">Today</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- BAKER TAB 2: BOOKINGS & ORDERS MANAGEMENT -->
+        <div class="dash-view-tab" id="tabBakerOrders">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h2 style="font-size: 1.8rem;">Orders & Bookings Management</h2>
+              <p style="color: var(--text-muted); font-size: 0.92rem;">Filter and update production status live.</p>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+              <input type="text" id="orderSearchInput" class="form-input" placeholder="Search order ID or customer..." style="width: 220px; padding: 8px 12px; font-size: 0.85rem;">
+              <select id="orderStatusFilter" class="form-select" style="width: 160px; padding: 8px 12px; font-size: 0.85rem;">
+                <option value="all">All Statuses</option>
+                <option value="New">New Orders</option>
+                <option value="Baking">In Oven / Baking</option>
+                <option value="Decorating">Decorating</option>
+                <option value="Delivery">Out for Delivery</option>
+                <option value="Delivered">Delivered</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer Info</th>
+                  <th>Cake & Specifications</th>
+                  <th>Delivery Slot</th>
+                  <th>Total Charged</th>
+                  <th>Status Workflow</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dashOrdersTableBody">
+                <!-- Dynamically populated by dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BAKER TAB 3: KANBAN BAKING QUEUE -->
+        <div class="dash-view-tab" id="tabBakerKanban">
+          <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">Kanban Kitchen & Baking Queue</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Visual staging board tracking batter prep, oven baking, decorating, and courier packing.</p>
+          </div>
+
+          <div class="kanban-board-grid">
+            <div class="kanban-column">
+              <div class="kanban-col-header">
+                <span class="kanban-col-title">New Inquiries</span>
+                <span class="kanban-count-pill">Stage 1</span>
+              </div>
+              <div id="kanbanColNew" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+
+            <div class="kanban-column">
+              <div class="kanban-col-header">
+                <span class="kanban-col-title">In The Oven</span>
+                <span class="kanban-count-pill">Baking</span>
+              </div>
+              <div id="kanbanColBaking" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+
+            <div class="kanban-column">
+              <div class="kanban-col-header">
+                <span class="kanban-col-title">Decorating & Gold</span>
+                <span class="kanban-count-pill">Finishing</span>
+              </div>
+              <div id="kanbanColDecorating" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+
+            <div class="kanban-column">
+              <div class="kanban-col-header">
+                <span class="kanban-col-title">Ready for Van</span>
+                <span class="kanban-count-pill">Dispatch</span>
+              </div>
+              <div id="kanbanColReady" style="display: flex; flex-direction: column; gap: 10px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BAKER TAB 4: INVENTORY & INGREDIENTS -->
+        <div class="dash-view-tab" id="tabBakerInventory">
+          <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">Inventory & Ingredient Levels</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Organic French flours, Callebaut cocoa, and low-stock replenishment warnings.</p>
+          </div>
+
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Ingredient & Origin</th>
+                  <th>Current Stock</th>
+                  <th>Minimum Alert Threshold</th>
+                  <th>Status</th>
+                  <th>Quick Action</th>
+                </tr>
+              </thead>
+              <tbody id="inventoryItemsList">
+                <!-- Dynamically populated by dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BAKER TAB 5: EDITABLE BASE PRICING MANAGER -->
+        <div class="dash-view-tab" id="tabBakerPricing">
+          <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">Storefront Menu & Base Pricing Manager</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Update the foundational per-kg price used by the customer-facing instant calculator.</p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-caramel); border-radius: var(--radius-md); padding: 32px; max-width: 650px;">
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="inputBaseRate" class="form-label">Base Rate Per Kilogram (USD)</label>
+              <input type="number" id="inputBaseRate" class="form-input" value="38.00" step="1.00" min="10">
+              <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Directly modifies the base calculation across all 5 cake size options.</span>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+              <label for="inputDeliveryRate" class="form-label">Standard Insulated Express Delivery Rate (USD)</label>
+              <input type="number" id="inputDeliveryRate" class="form-input" value="5.00" step="0.50" min="0">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="savePricingRatesBtn">
+              Save & Synchronize Storefront Pricing
+            </button>
+          </div>
+        </div>
+
+        <!-- CUSTOMER TAB 1: LIVE ORDER TRACKING -->
+        <div class="dash-view-tab" id="tabCustomerTracker">
+          <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 1.8rem;">Live Order Tracking</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Follow your artisanal creation from stone oven to your doorstep.</p>
+          </div>
+
+          <div style="background: var(--bg-surface); border: 1px solid var(--border-caramel); border-radius: var(--radius-lg); padding: 36px; max-width: 800px; margin-bottom: 30px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-caramel); padding-bottom: 18px; margin-bottom: 24px;">
+              <div>
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Tracking Order:</span>
+                <h3 id="custTrackerOrderId" style="font-family: monospace; color: var(--caramel-gold); font-size: 1.5rem;">AMR-2026-9214</h3>
+              </div>
+              <div style="text-align: right;">
+                <span style="font-size: 0.85rem; color: var(--text-muted);">Estimated Delivery:</span>
+                <h4 id="custTrackerEta" style="color: var(--cocoa-deep); font-size: 1.1rem;">Oct 07, 2026 during 13:00 - 14:30</h4>
+              </div>
+            </div>
+
+            <h4 id="custTrackerCakeTitle" style="font-size: 1.25rem; margin-bottom: 24px;">Classic Red Velvet (1.0 kg)</h4>
+
+            <!-- Live Tracker Progress Timeline -->
+            <div style="display: flex; justify-content: space-between; position: relative; margin-top: 30px;">
+              <div style="position: absolute; top: 15px; left: 10px; right: 10px; height: 4px; background: rgba(74,44,32,0.12); z-index: 1;"></div>
+              <div style="position: absolute; top: 15px; left: 10px; width: 65%; height: 4px; background: var(--caramel-gold); z-index: 2;"></div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 3;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--cocoa-deep); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">✓</div>
+                <span style="font-size: 0.78rem; font-weight: 700; margin-top: 8px;">Order Placed</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 3;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--cocoa-deep); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">✓</div>
+                <span style="font-size: 0.78rem; font-weight: 700; margin-top: 8px;">In The Oven</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 3;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--caramel-gold); color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; box-shadow: 0 0 12px var(--caramel-gold);">✦</div>
+                <span style="font-size: 0.78rem; font-weight: 700; color: var(--caramel-gold); margin-top: 8px;">Decorating</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 3;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: #FFF; border: 2px solid var(--border-caramel); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">4</div>
+                <span style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px;">Out for Delivery</span>
+              </div>
+
+              <div style="display: flex; flex-direction: column; align-items: center; position: relative; z-index: 3;">
+                <div style="width: 32px; height: 32px; border-radius: 50%; background: #FFF; border: 2px solid var(--border-caramel); color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">5</div>
+                <span style="font-size: 0.78rem; color: var(--text-muted); margin-top: 8px;">Delivered</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CUSTOMER TAB 2: ORDER HISTORY -->
+        <div class="dash-view-tab" id="tabCustomerHistory">
+          <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">Past Orders & Receipts</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Review your past confection receipts and 1-click reorder favorite designs.</p>
+          </div>
+
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Creation</th>
+                  <th>Date Scheduled</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-family: monospace; font-weight: 700; color: var(--caramel-gold);">AMR-2026-9214</td>
+                  <td>Classic Red Velvet (1.0 kg)</td>
+                  <td>Oct 06, 2026 (Evening)</td>
+                  <td>$54.60</td>
+                  <td><span class="dash-status-pill delivery">Out for Delivery</span></td>
+                  <td><button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem; min-height: 28px;" onclick="alert('Downloading invoice AMR-2026-9214.pdf')">Download Invoice</button></td>
+                </tr>
+                <tr>
+                  <td style="font-family: monospace; font-weight: 700; color: var(--caramel-gold);">AMR-2026-8740</td>
+                  <td>Salted Butterscotch Praline (2.0 kg)</td>
+                  <td>Sep 18, 2026 (Morning)</td>
+                  <td>$98.20</td>
+                  <td><span class="dash-status-pill delivered">Delivered</span></td>
+                  <td><button class="btn btn-outline" style="padding: 4px 10px; font-size: 0.75rem; min-height: 28px;" onclick="alert('Design loaded into customizer!')">Reorder Design</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CUSTOMER TAB 3: SAVED DESIGNS -->
+        <div class="dash-view-tab" id="tabCustomerDesigns">
+          <div style="margin-bottom: 20px;">
+            <h2 style="font-size: 1.8rem;">Saved Cake Designs & Moodboards</h2>
+            <p style="color: var(--text-muted); font-size: 0.92rem;">Bespoke cake formulations saved for upcoming anniversaries and birthdays.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-caramel); border-radius: var(--radius-md); padding: 20px;">
+              <h4 style="font-size: 1.15rem; margin-bottom: 4px;">Grand Anniversary Tier</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">3.0 kg Sicilian Pistachio with 24K Gold and White Roses.</p>
+              <button type="button" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.82rem; min-height: 34px;" onclick="PatisserieDashboard.closeDashboard(); window.CakeCustomizer.init();">
+                Load in Live Customizer
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Floating Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"/>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript Libraries & Application Code -->
+  <script src="../assets/js/customizer.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

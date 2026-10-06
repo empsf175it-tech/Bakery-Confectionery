@@ -1,0 +1,13 @@
+/* ==========================================================================
+   BAKESTUDIO - MASTER STYLESHEET
+   This master stylesheet imports isolated CSS modules for each screen view:
+   - base.css     : Design tokens, variables, typography, resets & global base components
+   - desktop.css  : 1024px+ Desktop view layout & styling ONLY
+   - tablet.css   : 640px-1023px Tablet view layout & styling ONLY
+   - mobile.css   : <640px Mobile view layout & styling ONLY
+   ========================================================================== */
+
+@import url('base.css');
+@import url('desktop.css');
+@import url('tablet.css');
+@import url('mobile.css');

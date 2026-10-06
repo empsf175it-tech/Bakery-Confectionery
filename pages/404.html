@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Confection Not Found | BakeStudio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Favicon & Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/logo-mark.svg">
+  <link rel="apple-touch-icon" href="../assets/images/logo/logo-mark.svg">
+
+  <!-- Dedicated View Stylesheets (Separate files for Base, Desktop >=1024px, Tablet 640-1023px, and Mobile <640px) -->
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/desktop.css">
+  <link rel="stylesheet" href="../assets/css/tablet.css">
+  <link rel="stylesheet" href="../assets/css/mobile.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .error-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      background: radial-gradient(circle at 50% 30%, rgba(201, 139, 75, 0.15) 0%, rgba(255, 246, 232, 0) 70%), var(--bg-primary);
+    }
+    .error-code {
+      font-family: var(--font-serif);
+      font-size: clamp(6rem, 15vw, 11rem);
+      font-weight: 800;
+      color: var(--caramel-gold);
+      line-height: 1;
+      margin-bottom: 12px;
+      text-shadow: 0 10px 30px rgba(201, 139, 75, 0.3);
+    }
+    .error-cake-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      color: var(--cocoa-deep);
+      animation: doughBounce 2s infinite ease-in-out;
+    }
+    .error-nav-pills {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-wrapper">
+    <div class="error-cake-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="3"/>
+      </svg>
+    </div>
+    <div class="error-code">404</div>
+    <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 16px; color: var(--cocoa-deep);">
+      Oops! This Slice is Missing
+    </h1>
+    <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 520px; margin-bottom: 24px;">
+      The confection you are looking for has already been devoured, or the URL recipe was entered incorrectly.
+    </p>
+
+    <div class="error-nav-pills">
+      <a href="../index.html" class="btn btn-primary">Return to Homepage</a>
+      <a href="../index.html#book-now" class="btn btn-outline">Design a Cake</a>
+      <a href="../index.html#gallery" class="btn btn-outline">Browse Gallery</a>
+      <a href="../index.html#contact" class="btn btn-outline">Contact Concierge</a>
+    </div>
+  </div>
+</body>
+</html>

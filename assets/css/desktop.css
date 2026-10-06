@@ -1,0 +1,240 @@
+/* ==========================================================================
+   BAKESTUDIO - DESKTOP VIEW STYLESHEET (1024px & ABOVE)
+   ANY CHANGES MADE IN THIS FILE WILL ONLY AFFECT THE DESKTOP VIEW (>=1024px)
+   ========================================================================== */
+
+@media screen and (min-width: 1024px) {
+  /* Navigation Bar - Desktop Horizontal Layout */
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .drawer-actions-item {
+    display: none !important;
+  }
+  
+  .nav-menu {
+    display: flex !important;
+    position: static;
+    transform: none !important;
+    background: transparent;
+    padding: 0;
+    gap: 32px;
+    box-shadow: none;
+    border-bottom: none;
+    flex-direction: row;
+  }
+
+  /* Hero Section Desktop Grid */
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 60px;
+  }
+
+  /* Features Strip Desktop Grid */
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* Interactive Customizer Desktop Layout */
+  .customizer-workspace {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 40px;
+  }
+
+  /* Pricing Calculator Desktop Layout */
+  .pricing-calculator-layout {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 40px;
+  }
+
+  /* Delivery Picker Desktop Layout */
+  .delivery-picker-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  /* Recipient Details Form Desktop Grid */
+  .details-form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  /* Services Desktop Grid (3 Columns) */
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* Enterprise Tiers Desktop Grid (3 Columns) */
+  .tier-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* Enterprise Banner Desktop Grid (2 Columns) */
+  .enterprise-banner {
+    grid-template-columns: 1fr 1fr;
+    padding: 48px;
+  }
+
+  /* Gallery Grid (4 Columns) */
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* Process Timeline Grid (5 Steps Horizontal) */
+  .process-timeline {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+
+  /* About Us Hero Desktop Grid */
+  .about-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  /* Team Grid (3 Columns) */
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  /* Contact Section Desktop Grid */
+  .contact-grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 50px;
+  }
+
+  /* Footer Grid (4 Columns) */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+  }
+
+  /* Dashboard Stats Grid (4 Columns) */
+  .dash-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  /* Dashboard Kanban Board (4 Columns) */
+  .kanban-board-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+}
+
+/* ==========================================================================
+   1024px - 1279px VIEW DASHBOARD & KANBAN ALIGNMENT
+   ========================================================================== */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .dash-header {
+    height: 70px !important;
+    padding: 0 20px !important;
+  }
+
+  .dash-user-profile {
+    align-items: center !important;
+  }
+
+  .dash-user-profile > div:last-child {
+    line-height: 1.2 !important;
+  }
+
+  .dash-sidebar {
+    width: 220px !important;
+    padding: 20px 12px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .dash-main-scroll {
+    padding: 24px 18px !important;
+  }
+
+  .dash-stats-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .dash-stat-card {
+    padding: 12px 8px !important;
+    gap: 8px !important;
+  }
+
+  .dash-stat-icon {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  .dash-stat-number {
+    font-size: 1.35rem !important;
+  }
+
+  .kanban-board-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    align-items: start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .kanban-column {
+    padding: 10px 8px !important;
+    border-radius: 10px !important;
+    min-height: 250px !important;
+    box-sizing: border-box !important;
+  }
+
+  .kanban-col-header {
+    gap: 4px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .kanban-col-title {
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  .kanban-count-pill {
+    padding: 2px 6px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .kanban-card {
+    padding: 10px 8px !important;
+    border-radius: 8px !important;
+  }
+
+  .kanban-card-id {
+    font-size: 0.72rem !important;
+  }
+
+  .kanban-card-title {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+    margin: 4px 0 6px 0 !important;
+  }
+
+  .kanban-card-meta {
+    font-size: 0.72rem !important;
+    gap: 2px !important;
+    padding-top: 4px !important;
+    margin-top: 6px !important;
+  }
+
+  .kanban-card-meta span {
+    font-size: 0.72rem !important;
+  }
+
+  .kanban-card-meta strong {
+    font-size: 0.7rem !important;
+  }
+}
